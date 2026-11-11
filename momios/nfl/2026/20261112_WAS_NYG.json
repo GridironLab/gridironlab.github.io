@@ -1,0 +1,598 @@
+{
+"fuente": "The Odds API (región us; mediana de las casas)",
+"evento": "74d39e19225caf211ad2c8eb4110179f",
+"kickoff_utc": "2026-11-13T01:15:00Z",
+"fecha_et": "2026-11-12",
+"visita": "WAS",
+"local": "NYG",
+"foto_utc": "2026-11-11T17:53:00Z",
+"casas": [
+"betmgm",
+"betonlineag",
+"betrivers",
+"draftkings",
+"fanduel"
+],
+"lineas": [
+{
+"jugador": "Antonio Williams",
+"stat": "receiving_yards",
+"linea": 38.5,
+"p": 0.4953,
+"min": 37.5,
+"max": 39.5,
+"casas": 5
+},
+{
+"jugador": "Antonio Williams",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.5445,
+"min": 3.5,
+"max": 3.5,
+"casas": 5
+},
+{
+"jugador": "Antonio Williams",
+"stat": "td",
+"linea": null,
+"p": 0.25,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Austin Ekeler",
+"stat": "receiving_yards",
+"linea": 8.5,
+"p": 0.4977,
+"min": 7.5,
+"max": 9.5,
+"casas": 5
+},
+{
+"jugador": "Austin Ekeler",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.5043,
+"min": 1.5,
+"max": 1.5,
+"casas": 5
+},
+{
+"jugador": "Austin Ekeler",
+"stat": "rushing_yards",
+"linea": 29.5,
+"p": 0.4969,
+"min": 27.5,
+"max": 29.5,
+"casas": 5
+},
+{
+"jugador": "Austin Ekeler",
+"stat": "td",
+"linea": null,
+"p": 0.2381,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Ben Sinnott",
+"stat": "td",
+"linea": null,
+"p": 0.0476,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Cam Skattebo",
+"stat": "receiving_yards",
+"linea": 7.5,
+"p": 0.5028,
+"min": 6.5,
+"max": 7.5,
+"casas": 5
+},
+{
+"jugador": "Cam Skattebo",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.4313,
+"min": 1.5,
+"max": 1.5,
+"casas": 5
+},
+{
+"jugador": "Cam Skattebo",
+"stat": "rushing_yards",
+"linea": 50.5,
+"p": 0.5031,
+"min": 50.5,
+"max": 52.5,
+"casas": 5
+},
+{
+"jugador": "Cam Skattebo",
+"stat": "td",
+"linea": null,
+"p": 0.4545,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Charlie Jones",
+"stat": "td",
+"linea": null,
+"p": 0.0588,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Chig Okonkwo",
+"stat": "receiving_yards",
+"linea": 34.5,
+"p": 0.4987,
+"min": 34.5,
+"max": 35.5,
+"casas": 5
+},
+{
+"jugador": "Chig Okonkwo",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.5752,
+"min": 3.5,
+"max": 4.5,
+"casas": 5
+},
+{
+"jugador": "Chig Okonkwo",
+"stat": "td",
+"linea": null,
+"p": 0.25,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Chris Manhertz",
+"stat": "td",
+"linea": null,
+"p": 0.0323,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Colson Yankoff",
+"stat": "td",
+"linea": null,
+"p": 0.04,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Darnell Mooney",
+"stat": "receiving_yards",
+"linea": 15.5,
+"p": 0.5028,
+"min": 15.5,
+"max": 16.5,
+"casas": 5
+},
+{
+"jugador": "Darnell Mooney",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.4872,
+"min": 1.5,
+"max": 1.5,
+"casas": 5
+},
+{
+"jugador": "Darnell Mooney",
+"stat": "td",
+"linea": null,
+"p": 0.1176,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Devin Singletary",
+"stat": "receiving_yards",
+"linea": 7.5,
+"p": 0.5047,
+"min": 7.5,
+"max": 8.5,
+"casas": 5
+},
+{
+"jugador": "Devin Singletary",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.4512,
+"min": 1.5,
+"max": 1.5,
+"casas": 5
+},
+{
+"jugador": "Devin Singletary",
+"stat": "rushing_yards",
+"linea": 23.5,
+"p": 0.5038,
+"min": 23.5,
+"max": 24.5,
+"casas": 5
+},
+{
+"jugador": "Devin Singletary",
+"stat": "td",
+"linea": null,
+"p": 0.2778,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Greg Desrosiers Jr.",
+"stat": "td",
+"linea": null,
+"p": 0.0588,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Isaiah Likely",
+"stat": "receiving_yards",
+"linea": 48.5,
+"p": 0.501,
+"min": 46.5,
+"max": 48.5,
+"casas": 5
+},
+{
+"jugador": "Isaiah Likely",
+"stat": "receptions",
+"linea": 4.5,
+"p": 0.5296,
+"min": 4.5,
+"max": 4.5,
+"casas": 5
+},
+{
+"jugador": "Isaiah Likely",
+"stat": "td",
+"linea": null,
+"p": 0.3333,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "J.J. McCarthy",
+"stat": "passing_yards",
+"linea": 210.5,
+"p": 0.4985,
+"min": 206.5,
+"max": 212.5,
+"casas": 5
+},
+{
+"jugador": "J.J. McCarthy",
+"stat": "rushing_yards",
+"linea": 17.5,
+"p": 0.4969,
+"min": 17.5,
+"max": 19.5,
+"casas": 5
+},
+{
+"jugador": "J.J. McCarthy",
+"stat": "td",
+"linea": null,
+"p": 0.1818,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Jaden Bradley",
+"stat": "td",
+"linea": null,
+"p": 0.0714,
+"sin_vig": false,
+"casas": 3
+},
+{
+"jugador": "Jalin Hyatt",
+"stat": "td",
+"linea": null,
+"p": 0.0476,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Jayden Daniels",
+"stat": "passing_yards",
+"linea": 201.5,
+"p": 0.5015,
+"min": 196.5,
+"max": 202.5,
+"casas": 5
+},
+{
+"jugador": "Jayden Daniels",
+"stat": "rushing_yards",
+"linea": 34.5,
+"p": 0.5185,
+"min": 31.5,
+"max": 37.5,
+"casas": 5
+},
+{
+"jugador": "Jayden Daniels",
+"stat": "td",
+"linea": null,
+"p": 0.274,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "John Bates",
+"stat": "td",
+"linea": null,
+"p": 0.0526,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Luke McCaffrey",
+"stat": "td",
+"linea": null,
+"p": 0.0757,
+"sin_vig": false,
+"casas": 4
+},
+{
+"jugador": "Malachi Fields",
+"stat": "receiving_yards",
+"linea": 26.5,
+"p": 0.5038,
+"min": 24.5,
+"max": 26.5,
+"casas": 5
+},
+{
+"jugador": "Malachi Fields",
+"stat": "receptions",
+"linea": 2.5,
+"p": 0.4147,
+"min": 2.5,
+"max": 2.5,
+"casas": 5
+},
+{
+"jugador": "Malachi Fields",
+"stat": "td",
+"linea": null,
+"p": 0.1818,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Malik Nabers",
+"stat": "receiving_yards",
+"linea": 67.5,
+"p": 0.4993,
+"min": 66.5,
+"max": 68.5,
+"casas": 5
+},
+{
+"jugador": "Malik Nabers",
+"stat": "receptions",
+"linea": 5.5,
+"p": 0.541,
+"min": 5.5,
+"max": 5.5,
+"casas": 5
+},
+{
+"jugador": "Malik Nabers",
+"stat": "td",
+"linea": null,
+"p": 0.3846,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "New York Giants D/ST",
+"stat": "td",
+"linea": null,
+"p": 0.1739,
+"sin_vig": false,
+"casas": 2
+},
+{
+"jugador": "New York Giants Defense",
+"stat": "td",
+"linea": null,
+"p": 0.1176,
+"sin_vig": false,
+"casas": 1
+},
+{
+"jugador": "Patrick Ricard",
+"stat": "td",
+"linea": null,
+"p": 0.0385,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Rachaad White",
+"stat": "receiving_yards",
+"linea": 12.5,
+"p": 0.5041,
+"min": 12.5,
+"max": 12.5,
+"casas": 5
+},
+{
+"jugador": "Rachaad White",
+"stat": "receptions",
+"linea": 2.5,
+"p": 0.4342,
+"min": 2.5,
+"max": 2.5,
+"casas": 5
+},
+{
+"jugador": "Rachaad White",
+"stat": "rushing_yards",
+"linea": 37.5,
+"p": 0.5,
+"min": 36.5,
+"max": 38.5,
+"casas": 5
+},
+{
+"jugador": "Rachaad White",
+"stat": "td",
+"linea": null,
+"p": 0.3704,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Robert Henry Jr.",
+"stat": "td",
+"linea": null,
+"p": 0.0476,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Stefon Diggs",
+"stat": "receiving_yards",
+"linea": 40.5,
+"p": 0.5015,
+"min": 38.5,
+"max": 41.5,
+"casas": 5
+},
+{
+"jugador": "Stefon Diggs",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.5941,
+"min": 3.5,
+"max": 3.5,
+"casas": 5
+},
+{
+"jugador": "Stefon Diggs",
+"stat": "td",
+"linea": null,
+"p": 0.2857,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Theo Johnson",
+"stat": "receiving_yards",
+"linea": 5.5,
+"p": 0.4972,
+"min": 3.5,
+"max": 5.5,
+"casas": 5
+},
+{
+"jugador": "Theo Johnson",
+"stat": "receptions",
+"linea": 0.5,
+"p": 0.6006,
+"min": 0.5,
+"max": 0.5,
+"casas": 5
+},
+{
+"jugador": "Theo Johnson",
+"stat": "td",
+"linea": null,
+"p": 0.1053,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Thomas Fidone",
+"stat": "td",
+"linea": null,
+"p": 0.0323,
+"sin_vig": false,
+"casas": 4
+},
+{
+"jugador": "Treylon Burks",
+"stat": "receiving_yards",
+"linea": 31.5,
+"p": 0.4989,
+"min": 30.5,
+"max": 31.5,
+"casas": 3
+},
+{
+"jugador": "Treylon Burks",
+"stat": "receptions",
+"linea": 2.5,
+"p": 0.4028,
+"min": 2.5,
+"max": 2.5,
+"casas": 3
+},
+{
+"jugador": "Treylon Burks",
+"stat": "td",
+"linea": null,
+"p": 0.2222,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Van Jefferson",
+"stat": "receiving_yards",
+"linea": 8.5,
+"p": 0.4947,
+"min": 7.5,
+"max": 8.5,
+"casas": 3
+},
+{
+"jugador": "Van Jefferson",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.3939,
+"min": 1.5,
+"max": 1.5,
+"casas": 3
+},
+{
+"jugador": "Van Jefferson",
+"stat": "td",
+"linea": null,
+"p": 0.125,
+"sin_vig": false,
+"casas": 5
+},
+{
+"jugador": "Washington Commanders D/ST",
+"stat": "td",
+"linea": null,
+"p": 0.1667,
+"sin_vig": false,
+"casas": 2
+},
+{
+"jugador": "Washington Commanders Defense",
+"stat": "td",
+"linea": null,
+"p": 0.1176,
+"sin_vig": false,
+"casas": 1
+}
+]
+}
