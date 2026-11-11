@@ -62,6 +62,10 @@ def pedir(ruta, **params):
         return json.load(r), (int(float(quedan)) if quedan else None)
 
 
+def es_defensa(nombre):
+    return nombre.endswith(" D/ST") or nombre.endswith(" Defense") or nombre in EQUIPOS
+
+
 def prob(precio):
     """Momio americano -> probabilidad implícita (con la comisión de la casa)."""
     return 100 / (precio + 100) if precio > 0 else -precio / (-precio + 100)
@@ -79,6 +83,8 @@ def resumir(evento):
             for o in m.get("outcomes", []):
                 por_jugador.setdefault(o.get("description", ""), {})[o["name"]] = o
             for jugador, oc in por_jugador.items():
+                if es_defensa(jugador):                      # "New York Giants D/ST": no es un jugador
+                    continue
                 if stat == "td":
                     si, no = oc.get("Yes"), oc.get("No")
                     if not si:

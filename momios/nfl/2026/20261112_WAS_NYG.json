@@ -400,22 +400,6 @@
 "casas": 5
 },
 {
-"jugador": "New York Giants D/ST",
-"stat": "td",
-"linea": null,
-"p": 0.1739,
-"sin_vig": false,
-"casas": 2
-},
-{
-"jugador": "New York Giants Defense",
-"stat": "td",
-"linea": null,
-"p": 0.1176,
-"sin_vig": false,
-"casas": 1
-},
-{
 "jugador": "Patrick Ricard",
 "stat": "td",
 "linea": null,
@@ -577,22 +561,6 @@
 "p": 0.125,
 "sin_vig": false,
 "casas": 5
-},
-{
-"jugador": "Washington Commanders D/ST",
-"stat": "td",
-"linea": null,
-"p": 0.1667,
-"sin_vig": false,
-"casas": 2
-},
-{
-"jugador": "Washington Commanders Defense",
-"stat": "td",
-"linea": null,
-"p": 0.1176,
-"sin_vig": false,
-"casas": 1
 }
 ]
 }
