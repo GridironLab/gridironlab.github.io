@@ -1,0 +1,47 @@
+# Gridiron Lab — guarda los momios de Vegas por jugador (props), 1 foto por partido.
+# Necesita el secreto ODDS_API_KEY (clave gratis de the-odds-api.com):
+#   Settings → Secrets and variables → Actions → New repository secret.
+# Se puede correr a mano en la pestaña Actions → "Momios de Vegas" → Run workflow.
+name: Momios de Vegas
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"      # cada 6 horas (UTC); solo gasta créditos si hay partidos en las próximas 36 h
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: momios
+  cancel-in-progress: false
+
+jobs:
+  momios:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Revisar que exista la clave
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          if [ -z "$ODDS_API_KEY" ]; then
+            echo "::warning::Falta el secreto ODDS_API_KEY: no se bajaron momios."
+            exit 0
+          fi
+          echo "ok=1" >> "$GITHUB_ENV"
+      - name: Bajar momios
+        if: env.ok == '1'
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python3 momios/bajar_momios.py
+      - name: Guardar en el repo
+        if: env.ok == '1'
+        run: |
+          git config user.name "Gridiron Lab (momios)"
+          git config user.email "noreply@anthropic.com"
+          git add momios/nfl
+          if git diff --cached --quiet; then echo "Sin momios nuevos"; exit 0; fi
+          git commit -m "Momios de Vegas $(date -u +%Y-%m-%d\ %H:%M) UTC"
+          git pull --rebase origin main
+          git push origin HEAD:main
