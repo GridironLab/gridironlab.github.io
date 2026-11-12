@@ -10,8 +10,9 @@ Qué hace en cada corrida:
   2. Para cada partido que empieza en las próximas 36 horas y que todavía
      NO tiene foto, pide los props de jugador (1 foto por partido).
   3. Resume cada línea: la mediana de las casas (la "línea de Vegas"), la
-     probabilidad sin comisión (sin "vig") de que la supere y cuántas casas
-     la ofrecen. Guarda momios/nfl/<temporada>/<fecha>_<VISITA>_<LOCAL>.json
+     probabilidad sin comisión (sin "vig") de que la supere, cuántas casas
+     la ofrecen y el pago decimal mediano de "más" y de "menos" (precio_mas,
+     precio_menos; en anota TD, precio del "sí"). Guarda momios/nfl/<temporada>/<fecha>_<VISITA>_<LOCAL>.json
 
 Costo (The Odds API): mercados × regiones por partido = 5 × 1 = 5 créditos.
 Unos 15 partidos por semana → ~75 créditos; el plan gratis da 500 al mes.
@@ -71,6 +72,11 @@ def prob(precio):
     return 100 / (precio + 100) if precio > 0 else -precio / (-precio + 100)
 
 
+def decimal(precio):
+    """Momio americano -> pago decimal (lo que regresa la casa por cada 1 apostado, incluido lo apostado)."""
+    return 1 + precio / 100 if precio > 0 else 1 + 100 / -precio
+
+
 def resumir(evento):
     """De la respuesta de un partido a una línea por jugador y estadística."""
     lineas = {}                    # (jugador, stat) -> lista de (casa, linea, p_mas_sin_vig)
@@ -92,9 +98,9 @@ def resumir(evento):
                     p = prob(si["price"])
                     if no:                                   # con las dos caras se quita la comisión
                         p = p / (p + prob(no["price"]))
-                        lineas.setdefault((jugador, stat), []).append((casa["key"], None, p, True))
+                        lineas.setdefault((jugador, stat), []).append((casa["key"], None, p, True, decimal(si["price"]), None))
                     else:
-                        lineas.setdefault((jugador, stat), []).append((casa["key"], None, p, False))
+                        lineas.setdefault((jugador, stat), []).append((casa["key"], None, p, False, decimal(si["price"]), None))
                     continue
                 mas, menos = oc.get("Over"), oc.get("Under")
                 if not mas or mas.get("point") is None:
@@ -102,20 +108,29 @@ def resumir(evento):
                 p = prob(mas["price"])
                 if menos:
                     p = p / (p + prob(menos["price"]))
-                lineas.setdefault((jugador, stat), []).append((casa["key"], float(mas["point"]), p, bool(menos)))
+                lineas.setdefault((jugador, stat), []).append((casa["key"], float(mas["point"]), p, bool(menos), decimal(mas["price"]),
+                                                              decimal(menos["price"]) if menos else None))
     out = []
     for (jugador, stat), xs in sorted(lineas.items()):
         if stat == "td":
             sin_vig = [x[2] for x in xs if x[3]]
             out.append({"jugador": jugador, "stat": stat, "linea": None,
                         "p": round(statistics.median(sin_vig or [x[2] for x in xs]), 4),
-                        "sin_vig": bool(sin_vig), "casas": len(xs)})
+                        "sin_vig": bool(sin_vig), "casas": len(xs),
+                        "precio": round(statistics.median(x[4] for x in xs), 3)})     # pago decimal mediano del "sí"
             continue
         linea = statistics.median(x[1] for x in xs)
         # probabilidad de "más" de las casas que ofrecen justo esa línea (si ninguna, todas)
         exactas = [x[2] for x in xs if x[1] == linea] or [x[2] for x in xs]
-        out.append({"jugador": jugador, "stat": stat, "linea": linea, "p": round(statistics.mean(exactas), 4),
-                    "min": min(x[1] for x in xs), "max": max(x[1] for x in xs), "casas": len(xs)})
+        fila = {"jugador": jugador, "stat": stat, "linea": linea, "p": round(statistics.mean(exactas), 4),
+                "min": min(x[1] for x in xs), "max": max(x[1] for x in xs), "casas": len(xs)}
+        # Pago decimal mediano de "más" y de "menos" entre las casas que ofrecen justo esa línea (con las dos caras).
+        # Es un resumen (mediana), no el precio de cada casa. Sirve para el pago real de una combinada.
+        con_precio = [x for x in xs if x[1] == linea and x[5] is not None]
+        if con_precio:
+            fila["precio_mas"] = round(statistics.median(x[4] for x in con_precio), 3)
+            fila["precio_menos"] = round(statistics.median(x[5] for x in con_precio), 3)
+        out.append(fila)
     return out
 
 
