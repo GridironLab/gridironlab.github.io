@@ -345,6 +345,88 @@ select { min-height: 44px; padding: 9px 10px; border: 1px solid var(--line-2); b
 .cb-nums .tile { padding: 10px 12px; background: var(--surface-2); border: 0; } .cb-nums .tile .v { font-size: 26px; } .cb-nums .tile .k { font-size: 12.5px; }
 .cb-tab td, .cb-tab th { white-space: normal; }
 #comb-hist .juego-lin > summary { flex-wrap: wrap; }
+/* ---------- Picks: laboratorio con boleto (Diseño V1.5) ---------- */
+/* El boleto va más oscuro que la página (en claro, más gris) y sus cuadros de cifras resaltan encima. */
+:root { --bol: #e2e7ef; --bol-line: #b4bdcc; --bol-tile: #ffffff; --bol-track: #ffffff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bol: #0a0e17; --bol-line: #2a3550; --bol-tile: #182030; --bol-track: #1f2839; } }
+:root[data-theme="dark"] { --bol: #0a0e17; --bol-line: #2a3550; --bol-tile: #182030; --bol-track: #1f2839; }
+#comb-filtros { display: flex; flex-direction: column; gap: 12px; }
+#sim-chips { flex-wrap: nowrap; gap: 0; padding: 3px; background: var(--surface); border: 1px solid var(--line-2); border-radius: 12px; }
+#sim-chips .btn-plan { flex: 1 1 auto; border: 0; border-radius: 9px; padding: 0 8px; white-space: nowrap; font-family: var(--f-display); font-weight: 600; font-size: 14.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+#sim-chips .btn-plan[aria-expanded="true"] { background: var(--accent); color: var(--accent-ink); }
+.cb-step { display: flex; flex-direction: column; gap: 10px; }
+.cb-paso { display: flex; align-items: center; gap: 8px; }
+.cb-paso .n { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font-family: var(--f-display); font-weight: 700; font-size: 15px; }
+.cb-paso .t { font-family: var(--f-display); font-weight: 600; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; }
+.cb-step .cb-fil { margin: 0; }
+.cb-step .cb-fila { flex-direction: column; align-items: stretch; flex-wrap: nowrap; gap: 4px; }
+.cb-step .cb-fila > .et { flex: none; font-family: var(--f-display); font-weight: 600; font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; }
+.cb-step .cb-fila select.search { flex: none; width: 100%; }
+.cb-step .cb-fila .seg { align-self: flex-start; max-width: 100%; }
+.cb-step .cb-merc { flex: none; }
+.cb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(10px, 1fr)); gap: 3px; }
+.cb-grid i { aspect-ratio: 1; border-radius: 2px; background: var(--line); }
+.cb-grid i.g { background: var(--accent); }
+.cb-grid i.v { background: var(--vegas); }
+.cb-ley { font-weight: 600; }
+.cb-ley.g { color: var(--accent); }
+.cb-ley.v { color: var(--vegas); }
+.cb-step .cb-buscar { margin-top: 0; min-height: 50px; border-radius: 12px; font-size: 18px; letter-spacing: .08em; }
+.cb-espera { border-style: dashed; border-color: var(--line-2); }
+.cb-step.cb-ver { border: 1px solid var(--line-2); }
+.cb-step.cb-ver.hay { border-color: var(--accent); }
+.cb-step.cb-ver h3 { font-family: var(--f-display); font-size: 28px; font-weight: 700; line-height: 1.05; letter-spacing: .01em; text-transform: uppercase; margin: 0; }
+.cb-salidas { display: flex; flex-wrap: wrap; gap: 8px; }
+article.cb-card { position: relative; gap: 0; min-width: 0; background: var(--bol); border: 1px solid var(--bol-line); border-left: 4px solid var(--line-2); border-radius: 14px; }
+article.cb-card.valor { border: 1px solid var(--bol-line); border-left: 4px solid var(--accent); }
+.cb-top, .cb-bot { padding: 14px 14px 12px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.cb-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.cb-head h3 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: 22px; letter-spacing: .04em; text-transform: uppercase; }
+.cb-card.valor .cb-head h3 b { color: var(--accent); font-size: 26px; }
+.cb-meta { font-family: var(--f-display); font-weight: 600; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.cb-ref { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 34px; }
+.cb-ref .txt { color: var(--muted); font-size: 13px; }
+.cb-sello { flex: none; transform: rotate(-4deg); border: 2px solid var(--muted); border-radius: 6px; padding: 3px 9px; background: var(--bol-tile); font-family: var(--f-display); font-weight: 700; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.cb-sello.chico { transform: rotate(-3deg); font-size: 12.5px; padding: 1px 7px; border-width: 1.5px; background: none; }
+.cb-sello.ok { color: var(--good); border-color: var(--good); }
+.cb-sello.no { color: var(--bad); border-color: var(--bad); }
+.cb-card .cb-leg { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; justify-content: stretch; align-items: center; gap: 7px 10px; padding: 10px 0 0; border-top: 1px solid var(--bol-line); font-size: 14px; }
+.cb-lt { display: flex; flex-direction: column; min-width: 0; }
+.cb-lt b { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
+.cb-lt .sub { color: var(--muted); font-size: 12.5px; }
+.cb-pp { display: flex; gap: 10px; background: var(--bol-tile); border-radius: 8px; padding: 4px 9px; font-family: var(--f-data); font-variant-numeric: tabular-nums; }
+.cb-pp span { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.05; }
+.cb-pp i { font-style: normal; font-weight: 600; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.cb-pp b { font-weight: 700; font-size: 21px; }
+.cb-pp .g { color: var(--accent); }
+.cb-pp .v { color: var(--vegas); }
+.cb-bars { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 3px; }
+.cb-bars .t { height: 6px; border-radius: 3px; background: var(--bol-track); overflow: hidden; }
+.cb-bars .t i { display: block; height: 100%; border-radius: 3px; }
+.cb-bars .g i { background: var(--accent); }
+.cb-bars .v i { background: var(--vegas); }
+.cb-usa { grid-column: 1 / -1; color: var(--muted); font-size: 12.5px; }
+.cb-perf { position: relative; height: 0; border-top: 2px dashed var(--bol-line); margin: 2px 0; }
+.cb-perf::before, .cb-perf::after { content: ""; position: absolute; top: -9px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); box-shadow: inset 0 0 0 1px var(--bol-line); }
+.cb-perf::before { left: -12px; clip-path: inset(0 0 0 50%); }
+.cb-perf::after { right: -9px; clip-path: inset(0 50% 0 0); }
+.cb-card .cb-nums { grid-template-columns: 1fr 1fr; }
+.cb-card .cb-nums .tile { background: var(--bol-tile); padding: 9px 12px; min-width: 0; }
+.cb-card .cb-nums .tile .k { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-height: 24px; }
+.cb-card .cb-nums .tile .k .q { margin-left: 0; }
+.cb-card .cb-pasar { align-self: stretch; border-radius: 12px; min-height: 46px; font-family: var(--f-display); font-weight: 700; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; }
+.cb-kicker { font-family: var(--f-display); font-weight: 600; font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.cb-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; align-items: end; margin: 4px 0 2px; }
+.cb-cols .col { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; min-width: 0; }
+.cb-cols .col b { font-family: var(--f-data); font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; }
+.cb-cols .col i { display: block; width: 100%; border-radius: 6px 6px 0 0; background: var(--bad); }
+.cb-cols .col span { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+#comb-hist .juego-lin { border-left: 4px solid var(--line-2); border-radius: 12px; }
+#comb-hist .juego-lin.valor { border-left-color: var(--accent); }
+.card.sim-comb { background: var(--bol); border: 1px solid var(--bol-line); border-left: 4px solid var(--accent); border-radius: 14px; }
+/* en pantallas anchas el boleto no se estira: sigue pareciendo boleto */
+article.cb-card, .cb-grid, .cb-cols, .card.sim-comb { max-width: 560px; }
+article.cb-card { width: 100%; }
 
 /* ---------- Simular partido ---------- */
 .sj { border: 1px solid var(--line); border-radius: 10px; background: var(--surface-2); padding: 12px; display: flex; flex-direction: column; gap: 10px; }
@@ -713,6 +795,14 @@ ul.notes strong { color: var(--ink); font-weight: 600; }
   /* el balón (GL) y la raya (Vegas) salen del medio campo y viajan a su yarda cuando la tarjeta entra en pantalla */
   .anim .field .mk { transition: left .7s cubic-bezier(.2,.9,.3,1.2); }
   .anim .game:not(.vis) .field .mk { left: 50% !important; }
+  /* Picks: el boleto sube, sus barras crecen desde la izquierda, el sello cae y las columnas de la comisión crecen */
+  @keyframes cbSello { from { transform: scale(1.6) rotate(-4deg); opacity: 0; } }
+  @keyframes cbGrowY { from { transform: scaleY(0); } }
+  article.cb-card { animation: glUp .35s cubic-bezier(.2,.8,.2,1) both; }
+  .cb-bars .t i { transform-origin: left; animation: glGrowX .7s .15s cubic-bezier(.2,.8,.2,1) both; }
+  .cb-card .cb-sello { animation: cbSello .45s .25s cubic-bezier(.2,.8,.2,1) both; }
+  .cb-cols .col i { transform-origin: bottom; animation: cbGrowY .6s cubic-bezier(.2,.8,.2,1) both; }
+  .cb-grid i { animation: glPop .3s both; }
   /* cada botón se hunde un poco al tocarlo */
   .btn-plan, .pk-btn, .sim-calc, .dcard, .nav-b, .tab, .seg button, .sport.on { transition: transform .12s ease-out; }
   .btn-plan:active, .pk-btn:active, .sim-calc:active, .dcard:active, .nav-b:active, .tab:active, .seg button:active, .sport.on:active { transform: scale(.96); }
@@ -762,7 +852,7 @@ ul.notes strong { color: var(--ink); font-weight: 600; }
     </div>
     <div id="comb-buscar" style="display:flex;flex-direction:column;gap:16px">
       <p class="lead">Busca las combinadas con más <strong>valor esperado</strong>: compara lo que piensa GL contra Las Vegas sin comisión, pierna por pierna, y dice con honestidad cuando ninguna tiene ventaja. Es análisis, no una recomendación para apostar.</p>
-      <div class="card" id="comb-filtros"></div>
+      <div id="comb-filtros"></div>
       <div id="comb-res" style="display:flex;flex-direction:column;gap:12px" aria-live="polite"></div>
       <div class="card" id="comb-edu" style="display:flex;flex-direction:column;gap:6px"></div>
     </div>
@@ -2631,6 +2721,18 @@ try { const f = JSON.parse(localStorage.getItem('gl_comb_filtros') || '{}');
 const guardarFiltrosComb = () => { try { localStorage.setItem('gl_comb_filtros', JSON.stringify({ n: COMB_UI.n, mismo: COMB_UI.mismo, mercados: COMB_UI.mercados })); } catch (e) { /* solo esta visita */ } };
 const pctC = (x) => pct(x, x < 0.1 ? 1 : 0);
 const evTxt = (x) => (Math.abs(x) < 0.0005 ? '0.0%' : sgn(x * 100) + '%');
+// ---------- PICKS (Diseño V1.5): laboratorio con boleto ----------
+// Solo cambia cómo se ve. Cada número lo calcula el motor (buscarComb) y se pinta con pctC, fx y evTxt, igual que antes.
+const pasoComb = (n, t) => h('div', { class: 'cb-paso' }, h('span', { class: 'n' }, String(n)), h('span', { class: 't' }, t));
+const filtrosComb = () => ({ partido: COMB_UI.partido, n: COMB_UI.n, mismo: COMB_UI.mismo, mercados: COMB_UI.mercados });
+function correrComb() { COMB_UI.res = buscarComb(filtrosComb()); renderCombRes(); }
+function equipoPierna(p) { if (p.pk.equipo) return p.pk.equipo; const j = p.pk.jugador ? jugadorDe(p.pk.jugador) : null; return j ? j.equipo : ''; }
+function abrirAprende(i) {
+  const d = document.querySelectorAll('#comb-edu > details.guia:not(.cb-tabla)')[i];
+  if (!d) return;
+  d.open = true; if (d.scrollIntoView) d.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+const ayudaComb = (i, que) => h('button', { class: 'q', type: 'button', title: `¿Qué es ${que}?`, 'aria-label': `Qué es ${que}`, onclick: (ev) => { ev.stopPropagation(); abrirAprende(i); } }, '?');
 function renderCombFiltros() {
   const P = prepararComb(), porMerc = {};
   P.L.forEach((l) => { if (!COMB_UI.partido || l.juego === COMB_UI.partido) porMerc[l.merc] = (porMerc[l.merc] || 0) + 1; });
@@ -2645,19 +2747,26 @@ function renderCombFiltros() {
     title: porMerc[m] ? `${porMerc[m]} piernas con línea de Vegas` : 'Sin líneas de Vegas todavía', onclick: () => {
       COMB_UI.mercados = COMB_UI.mercados.includes(m) ? COMB_UI.mercados.filter((x) => x !== m) : [...COMB_UI.mercados, m]; cambio(); } },
     COMB_MERC[m], porMerc[m] ? ` · ${porMerc[m]}` : ''));
+  // las piernas que el motor va a revisar con estos filtros (la misma regla que usa buscarComb): un cuadro por pierna
+  const base = P.L.filter((l) => COMB_UI.mercados.includes(l.merc) && (!COMB_UI.partido || l.juego === COMB_UI.partido) && (!COMB_FILTROS.deporte || l.deporte === COMB_FILTROS.deporte));
+  const nJ = new Set(base.map((l) => l.juego)).size;
   $('#comb-filtros').replaceChildren(
-    h('h3', {}, 'Buscar combinación'),
-    h('div', { class: 'cb-fil' },
-      fila('Partidos', sel),
-      fila('Piernas', seg([[2, '2'], [3, '3'], [4, '4']], COMB_UI.n, (v) => { COMB_UI.n = v; cambio(); })),
-      fila('Mismo partido', COMB_UI.partido ? h('span', { class: 'count' }, 'Con un solo partido, todas las piernas son de ese partido.')
-        : seg([[true, 'Permitir'], [false, 'Solo partidos distintos']], COMB_UI.mismo, (v) => { COMB_UI.mismo = v; cambio(); })),
-      fila('Mercados', h('div', { class: 'cb-merc' }, ...mercs))),
-    h('button', { class: 'cb-buscar', id: 'comb-btn', type: 'button', onclick: () => {
-      COMB_UI.res = buscarComb({ partido: COMB_UI.partido, n: COMB_UI.n, mismo: COMB_UI.mismo, mercados: COMB_UI.mercados }); renderCombRes();
-      const r = $('#comb-res'); if (r.scrollIntoView) r.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } }, 'Buscar combinación'),
-    h('p', { class: 'sim-nota' }, `Compara las probabilidades de GL contra las de Las Vegas sin comisión en ${P.L.length} piernas de ${Object.keys(P.porJuego).length} partidos. `,
-      'La línea de Vegas de cada jugador se guarda hasta un día antes del partido; GL es de hoy.'));
+    h('div', { class: 'card cb-step' }, pasoComb(1, 'Elige'),
+      h('div', { class: 'cb-fil' },
+        fila('Partidos', sel),
+        fila('Piernas', seg([[2, '2'], [3, '3'], [4, '4']], COMB_UI.n, (v) => { COMB_UI.n = v; cambio(); })),
+        fila('Mismo partido', COMB_UI.partido ? h('span', { class: 'count' }, 'Con un solo partido, todas las piernas son de ese partido.')
+          : seg([[true, 'Permitir'], [false, 'Solo partidos distintos']], COMB_UI.mismo, (v) => { COMB_UI.mismo = v; cambio(); })),
+        fila('Mercados', h('div', { class: 'cb-merc' }, ...mercs)))),
+    h('div', { class: 'card cb-step' }, pasoComb(2, 'GL busca'),
+      h('div', { class: 'cb-grid', id: 'comb-grid', 'aria-hidden': 'true' }, ...base.map((l, k) => h('i', { class: l.pG > l.pV ? 'g' : l.pG < l.pV ? 'v' : 'e', style: `animation-delay:${(k % 28) * 12}ms` }))),
+      h('p', { class: 'sim-nota', id: 'comb-cuenta' }, h('b', {}, `${base.length.toLocaleString('es-MX')} ${base.length === 1 ? 'pierna' : 'piernas'}`),
+        ` de ${nJ} ${nJ === 1 ? 'partido' : 'partidos'} · ${COMB_N.toLocaleString('es-MX')} simulaciones por partido. Cada cuadro es una pierna: `,
+        h('span', { class: 'cb-ley g' }, 'naranja'), ' donde GL ve más probabilidad que Las Vegas sin comisión, ', h('span', { class: 'cb-ley v' }, 'azul'), ' donde ve menos.'),
+      h('button', { class: 'cb-buscar', id: 'comb-btn', type: 'button', onclick: () => {
+        correrComb();
+        const r = $('#comb-res'); if (r.scrollIntoView) r.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } }, 'Buscar combinación'),
+      h('p', { class: 'sim-nota' }, 'La línea de Vegas de cada jugador se guarda hasta un día antes del partido; GL es de hoy.')));
 }
 function tablaPesosComb(mercados) {
   const EST = { 'sin ventaja': 'Sin ventaja demostrada', 'indicio sin confirmar': 'Indicio sin confirmar', 'sin medida limpia': 'Aún sin medición limpia', 'ventaja demostrada': 'Ventaja demostrada' };
@@ -2673,44 +2782,69 @@ function tablaPesosComb(mercados) {
       ...mercados.filter((m) => P[m] && P[m].nota).map((m) => h('p', { class: 'sim-nota' }, h('b', {}, COMB_MERC[m] + ': '), P[m].nota))));
 }
 function tarjetaCombUI(t) {
-  const valor = t.tipo === 'valor', usa = t.piernas.some((p) => p.w > 0);
-  const tile = (k, v, f) => h('div', { class: 'tile' }, h('div', { class: 'k' }, k), h('div', { class: 'v' }, v), f ? h('div', { class: 'f' }, f) : null);
-  return h('article', { class: 'card cb-card' + (valor ? ' valor' : ''), 'data-tipo': t.tipo },
-    h('div', { class: 'sim-head' },
-      h('h3', {}, valor ? `Valor esperado ${evTxt(t.ev)}` : 'La más probable'),
-      valor ? h('span', { class: 'tag-src' }, 'Contra Vegas sin comisión') : h('span', { class: 'tag-src' }, 'Solo referencia · no es una recomendación')),
-    ...t.piernas.map((p) => h('div', { class: 'cb-leg' }, h('span', {}, p.texto, p.aprox ? h('span', { class: 'count', title: 'Las casas solo publican el "sí" de anota TD: se le quitó el margen con un ajuste medido, es aproximado.' }, ' *') : null),
-      h('span', { class: 'pp' }, h('b', { class: 'g' }, `GL ${pctC(p.pG)}`), ' · ', h('b', { class: 'v' }, `Vegas ${pctC(p.pV)}`), usa ? ` · cuenta ${pctC(p.pS)}` : ''))),
-    h('div', { class: 'cb-nums' },
-      tile('Probabilidad conjunta', pctC(t.pS), `1 de cada ${Math.max(1, Math.round(1 / t.pS))} · GL sin ajustar: ${pctC(t.pG)}`),
-      tile('Vegas sin comisión', pctC(t.pV), t.mismoPartido ? 'con la misma correlación' : 'piernas independientes'),
-      tile('Pago justo', fx(t.pagoJusto, 2), 'por cada 1, sin comisión'),
-      tile('Valor esperado', evTxt(t.ev), usa ? `intervalo ${evTxt(t.evMin)} a ${evTxt(t.evMax)}` : 'antes de la comisión')),
-    h('p', { class: 'sim-nota' }, h('b', {}, 'Por qué: '), t.porque),
-    t.mismoPartido ? h('p', { class: 'sim-nota' }, `Hay piernas del mismo partido${t.corr ? ` (la relación más fuerte entre dos de ellas es ${sgn(t.corr.r * 100)}%)` : ''}: `,
-      `multiplicarlas como si fueran independientes daría ${pctC(t.indep)} (pago ${fx(t.pagoIndep, 2)}), y eso es solo una aproximación. `,
-      'No tenemos el precio real de combinadas del mismo partido: las casas las cotizan aparte y también cobran esa relación.')
-      : h('p', { class: 'sim-nota' }, 'Piernas de partidos distintos: se multiplican. ',
-        t.pagoReal ? `Con los precios que tenemos guardados una casa pagaría ${fx(t.pagoReal, 2)} (lo justo sería ${fx(t.pagoJusto, 2)}): valor esperado ya con comisión, ${evTxt(t.evReal)}.`
-          : 'No tenemos guardado el precio real de todas las piernas; una casa pagaría menos que el pago justo.'),
-    h('button', { class: 'btn-plan', type: 'button', style: 'align-self:flex-start', onclick: () => {
-      COMB = t.piernas.map((p) => p.pk); guardarComb(); ultimoCalculo = null; cambiarVistaSim('picks'); renderSim(); } }, 'Pasar a "Arma la tuya" →'));
+  const valor = t.tipo === 'valor', usa = t.piernas.some((p) => p.w > 0), aprox = t.piernas.some((p) => p.aprox);
+  const tile = (k, q, v, f) => h('div', { class: 'tile' }, h('div', { class: 'k' }, k, q), h('div', { class: 'v' }, v), f ? h('div', { class: 'f' }, f) : null);
+  const barra = (c, x) => h('span', { class: 't ' + c }, h('i', { style: `width:${(x * 100).toFixed(1)}%` }));
+  const pierna = (p) => { const g = juegoDe(p.juego), eq = equipoPierna(p);
+    return h('div', { class: 'cb-leg', 'data-eq': eq },
+      eq ? escudo(eq, 34) : h('span', {}),
+      h('div', { class: 'cb-lt' }, h('b', {}, p.texto.replace(/ \([A-Z]{2,3} @ [A-Z]{2,3}\)$/, ''), p.aprox ? h('span', { class: 'count' }, ' *') : null),
+        h('span', { class: 'sub' }, g ? `${g.visita} @ ${g.local} · ` : '', COMB_MERC[p.merc])),
+      h('div', { class: 'cb-pp' }, h('span', { class: 'g' }, h('i', {}, 'GL'), h('b', {}, pctC(p.pG))), h('span', { class: 'v' }, h('i', {}, 'Vegas'), h('b', {}, pctC(p.pV)))),
+      h('div', { class: 'cb-bars', 'aria-hidden': 'true' }, barra('g', p.pG), barra('v', p.pV)),
+      usa ? h('span', { class: 'cb-usa' }, `Para la combinación cuenta ${pctC(p.pS)}`) : null); };
+  return h('article', { class: 'cb-card' + (valor ? ' valor' : ''), 'data-tipo': t.tipo },
+    h('div', { class: 'cb-top' },
+      h('div', { class: 'cb-head' }, h('h3', {}, ...(valor ? ['Valor esperado ', h('b', {}, evTxt(t.ev))] : ['La más probable'])),
+        h('span', { class: 'cb-meta' }, `${t.piernas.length} piernas · S${D.semana}`)),
+      h('div', { class: 'cb-ref' }, h('span', { class: 'txt' }, valor ? 'Contra Vegas sin comisión. Es análisis: no es una recomendación.' : 'Es la más probable de armar: no es una recomendación.'),
+        valor ? null : h('span', { class: 'cb-sello' }, 'Solo referencia')),
+      ...t.piernas.map(pierna),
+      aprox ? h('p', { class: 'sim-nota' }, '* Anota TD: las casas solo publican el "sí". Se le quitó el margen con un ajuste medido; es aproximado.') : null),
+    h('div', { class: 'cb-perf', 'aria-hidden': 'true' }),
+    h('div', { class: 'cb-bot' },
+      h('div', { class: 'cb-nums' },
+        tile('Probabilidad conjunta', ayudaComb(2, 'la probabilidad conjunta'), pctC(t.pS), `1 de cada ${Math.max(1, Math.round(1 / t.pS))} · GL sin ajustar: ${pctC(t.pG)}`),
+        tile('Vegas sin comisión', ayudaComb(1, 'la probabilidad sin comisión'), pctC(t.pV), t.mismoPartido ? 'con la misma correlación' : 'piernas independientes'),
+        tile('Pago justo', ayudaComb(1, 'el pago justo'), fx(t.pagoJusto, 2), 'por cada 1, sin comisión'),
+        tile('Valor esperado', ayudaComb(0, 'el valor esperado'), evTxt(t.ev), usa ? `intervalo ${evTxt(t.evMin)} a ${evTxt(t.evMax)}` : 'antes de la comisión')),
+      h('p', { class: 'sim-nota' }, h('b', {}, 'Por qué: '), t.porque),
+      t.mismoPartido ? h('p', { class: 'sim-nota' }, `Hay piernas del mismo partido${t.corr ? ` (la relación más fuerte entre dos de ellas es ${sgn(t.corr.r * 100)}%)` : ''}: `,
+        `multiplicarlas como si fueran independientes daría ${pctC(t.indep)} (pago ${fx(t.pagoIndep, 2)}), y eso es solo una aproximación. `,
+        'No tenemos el precio real de combinadas del mismo partido: las casas las cotizan aparte y también cobran esa relación.')
+        : h('p', { class: 'sim-nota' }, 'Piernas de partidos distintos: se multiplican. ',
+          t.pagoReal ? `Con los precios que tenemos guardados una casa pagaría ${fx(t.pagoReal, 2)} (lo justo sería ${fx(t.pagoJusto, 2)}): valor esperado ya con comisión, ${evTxt(t.evReal)}.`
+            : 'No tenemos guardado el precio real de todas las piernas; una casa pagaría menos que el pago justo.'),
+      h('button', { class: 'btn-plan cb-pasar', type: 'button', onclick: () => {
+        COMB = t.piernas.map((p) => p.pk); guardarComb(); ultimoCalculo = null; cambiarVistaSim('picks'); renderSim(); } }, 'Pasar a "Arma la tuya" →')));
 }
 function renderCombRes() {
   const box = $('#comb-res'), R = COMB_UI.res;
-  if (!R) { box.replaceChildren(); return; }
+  if (!R) {                                             // antes de buscar: el paso 3 espera, y avisa que "no hay ventaja" también es una respuesta
+    box.replaceChildren(h('div', { class: 'card cb-step cb-espera', id: 'comb-espera' }, pasoComb(3, 'Resultado'),
+      h('p', { class: 'sim-nota' }, 'Toca "Buscar combinación". Si GL no encuentra ventaja contra Las Vegas, aquí lo va a decir: también es un resultado válido.')));
+    return;
+  }
   const kids = [];
-  if (R.candidatas < R.filtros.n) {
-    kids.push(h('div', { class: 'empty' }, `Con estos filtros solo hay ${R.candidatas} piernas con línea de Vegas: no alcanza para una combinación de ${R.filtros.n}. Prueba con más mercados o con la semana completa.`));
-    box.replaceChildren(...kids); return;
+  if (R.candidatas < R.filtros.n) {                     // no alcanzan las piernas: es distinto de "no hay ventaja", y se sale con un toque
+    const salidas = [];
+    if (R.filtros.n > 2 && R.candidatas >= 2) salidas.push(['Bajar a 2 piernas', () => { COMB_UI.n = 2; }]);
+    if (COMB_UI.mercados.length < Object.keys(COMB_MERC).length) salidas.push(['Todos los mercados', () => { COMB_UI.mercados = Object.keys(COMB_MERC); }]);
+    if (COMB_UI.partido) salidas.push(['Semana completa', () => { COMB_UI.partido = ''; }]);
+    box.replaceChildren(h('div', { class: 'card cb-step cb-ver', id: 'comb-faltan' }, pasoComb(3, 'Resultado'), h('h3', {}, 'Faltan piernas para armarla'),
+      h('p', { class: 'lead', style: 'font-size:13.5px' }, `Con estos filtros solo hay ${R.candidatas} ${R.candidatas === 1 ? 'pierna' : 'piernas'} con línea de Vegas: no alcanza para una combinación de ${R.filtros.n}. `,
+        h('strong', {}, 'No es lo mismo que "no hay ventaja":'), ' todavía no se buscó nada.'),
+      salidas.length ? h('div', { class: 'cb-salidas' }, ...salidas.map(([t, f]) => h('button', { class: 'btn-plan', type: 'button', onclick: () => { f(); guardarFiltrosComb(); renderCombFiltros(); correrComb(); } }, t))) : null));
+    return;
   }
   if (R.hayVentaja) {
-    kids.push(h('div', { class: 'card cb-ver', id: 'comb-veredicto', 'data-ventaja': '1' }, h('h3', {}, `${R.valor.length} ${R.valor.length === 1 ? 'combinación' : 'combinaciones'} con valor esperado positivo`),
+    kids.push(h('div', { class: 'card cb-step cb-ver hay', id: 'comb-veredicto', 'data-ventaja': '1' }, pasoComb(3, 'Resultado'),
+      h('h3', {}, `${R.valor.length} ${R.valor.length === 1 ? 'combinación' : 'combinaciones'} con valor esperado positivo`),
       h('p', { class: 'lead', style: 'font-size:13.5px' }, 'Ordenadas por valor esperado contra Las Vegas sin comisión, no por probabilidad. El valor ya usa la probabilidad de GL encogida hacia Vegas con el peso medido de cada mercado. Sigue siendo análisis: una casa paga menos que el pago justo.')),
       ...R.valor.map(tarjetaCombUI));
   } else {
     const conPeso = R.filtros.mercados.some((m) => R.pesos[m] && R.pesos[m].w > 0);
-    kids.push(h('div', { class: 'card cb-ver', id: 'comb-veredicto', 'data-ventaja': '0' }, h('h3', {}, 'GL no encuentra ventaja hoy'),
+    kids.push(h('div', { class: 'card cb-step cb-ver', id: 'comb-veredicto', 'data-ventaja': '0' }, pasoComb(3, 'Resultado'), h('h3', {}, 'GL no encuentra ventaja hoy'),
       h('p', { class: 'lead', style: 'font-size:13.5px' }, `Se revisaron ${R.candidatas} piernas de ${R.partidos} ${R.partidos === 1 ? 'partido' : 'partidos'}. `,
         conPeso ? 'Ninguna combinación llega a +2% de valor esperado contra Vegas sin comisión con el peso más bajo de su intervalo. '
           : 'En los mercados que elegiste GL todavía no ha demostrado saber más que Las Vegas, así que ninguna combinación tiene valor esperado positivo. ',
@@ -2733,11 +2867,16 @@ function renderCombEdu() {
   const sec = (tit, ...c) => h('details', { class: 'guia' }, h('summary', {}, tit), h('div', { class: 'guia-c' }, ...c));
   const p = (...t) => h('p', {}, ...t), ej = (...t) => h('div', { class: 'glo-ej' }, ...t);
   $('#comb-edu').replaceChildren(
+    h('span', { class: 'cb-kicker' }, 'Aprende'),
     h('h3', {}, 'Por qué una combinada casi siempre te cuesta más'),
     h('p', { class: 'lead', style: 'font-size:13.5px' }, 'Las casas cobran comisión en cada pierna. En un momio típico de −110 por lado la probabilidad justa es 50%, pero por cada 1 apostado te regresan 1.91 (lo justo sería 2.00): en promedio pierdes 4.5%. Al combinar piernas, esa comisión se multiplica:'),
-    h('div', { class: 'tblwrap' }, h('table', { class: 'cb-tab' },
-      h('thead', {}, h('tr', {}, h('th', { class: 'l' }, 'Piernas a −110'), h('th', {}, 'Paga la casa'), h('th', {}, 'Pago justo'), h('th', {}, 'Pierdes en promedio'))),
-      h('tbody', {}, ...filas.map(([n, real, justo, ev]) => h('tr', {}, h('td', { class: 'l' }, String(n)), h('td', {}, fx(real, 2)), h('td', {}, fx(justo, 2)), h('td', { class: 'down' }, evTxt(ev))))))),
+    // las mismas cuatro cifras de la tabla, como columnas: la altura es lo que se pierde en promedio
+    h('div', { class: 'cb-cols', id: 'comb-cols' }, ...filas.map(([n, , , ev]) => h('div', { class: 'col' }, h('b', {}, evTxt(ev)),
+      h('i', { style: `height:${(ev / filas[filas.length - 1][3] * 84).toFixed(1)}px` }), h('span', {}, `${n} ${n === 1 ? 'pierna' : 'piernas'}`)))),
+    h('details', { class: 'guia cb-tabla' }, h('summary', {}, 'Ver la tabla: lo que paga la casa y lo justo'), h('div', { class: 'guia-c' },
+      h('div', { class: 'tblwrap' }, h('table', { class: 'cb-tab' },
+        h('thead', {}, h('tr', {}, h('th', { class: 'l' }, 'Piernas a −110'), h('th', {}, 'Paga la casa'), h('th', {}, 'Pago justo'), h('th', {}, 'Pierdes en promedio'))),
+        h('tbody', {}, ...filas.map(([n, real, justo, ev]) => h('tr', {}, h('td', { class: 'l' }, String(n)), h('td', {}, fx(real, 2)), h('td', {}, fx(justo, 2)), h('td', { class: 'down' }, evTxt(ev))))))))),
     h('p', { class: 'sim-nota' }, 'Y en combinadas del mismo partido las casas además cobran la relación entre las piernas: no pagan el producto.'),
     sec('Valor esperado', p('Es lo que ganarías o perderías en promedio por cada 1 apostado si pudieras repetir la misma apuesta muchas veces: probabilidad de ganar × lo que te pagan − 1.'),
       ej('Ejemplo: algo que pasa 40% de las veces y paga 2.60 → 0.40 × 2.60 − 1 = +4%. Si paga 2.30 → 0.40 × 2.30 − 1 = −8%. La misma probabilidad puede ser buena o mala apuesta según el precio: por eso aquí se ordena por valor esperado y no por probabilidad.')),
@@ -2761,13 +2900,14 @@ function renderCombHist() {
   box.replaceChildren(intro,
     h('div', { class: 'tiles' }, ...Object.entries(H.resumen).map(([t, x]) => tile(NOM[t] || t, x.calificadas ? `${x.aciertos}/${x.calificadas}` : '—',
       x.calificadas ? `se esperaban ${fx(x.esperados, 1)} · a 1 unidad y pago justo: ${sgn(x.unidades)} · ${x.pendientes} pendientes` : `${x.guardadas} guardadas · ${x.pendientes} pendientes`))),
-    h('div', { style: 'display:flex;flex-direction:column;gap:8px' }, ...H.filas.map((f) => h('details', { class: 'juego-lin' },
+    h('div', { style: 'display:flex;flex-direction:column;gap:8px' }, ...H.filas.map((f) => h('details', { class: 'juego-lin' + (f.tipo === 'valor' ? ' valor' : '') },
       h('summary', {}, h('span', {}, `Semana ${f.sem} · ${f.n} piernas · ${pctC(f.p)}`),
         h('span', { style: 'display:inline-flex;gap:8px;align-items:center' }, h('span', { class: 'tag-src' }, f.tipo === 'valor' ? 'Con valor' : 'Referencia'),
-          MARCA[f.estado] ? h('span', { class: 'mark ' + MARCA[f.estado][0] }, MARCA[f.estado][1]) : h('span', { class: 'count' }, f.estado === 'anulada' ? 'Anulada' : 'Pendiente'))),
+          MARCA[f.estado] ? h('span', { class: 'cb-sello chico ' + MARCA[f.estado][0] }, MARCA[f.estado][1]) : h('span', { class: 'cb-sello chico' }, f.estado === 'anulada' ? 'Anulada' : 'Pendiente'))),
       h('div', { class: 'jl-body' }, ...f.piernas.map((p) => h('div', { class: 'jl-row' }, h('span', {}, p.texto),
         h('span', { class: 'lchip ' + (p.ok === true ? 'ok' : 'no') }, p.ok === true ? '✓' : p.ok === false ? '✗' : p.ok === 'anulada' ? 'no jugó' : 'pendiente'))),
-        h('div', { class: 'jl-row' }, h('span', { class: 'count' }, `Guardada el ${new Intl.DateTimeFormat('es-MX', { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', timeZone: 'America/Mexico_City' }).format(new Date(f.foto))} · Vegas sin comisión ${pctC(f.pv)} · pago justo ${fx(f.pago, 2)} · valor esperado ${evTxt(f.ev)}`)))))));
+        h('div', { class: 'jl-row' }, h('span', { class: 'count' }, `Guardada el ${new Intl.DateTimeFormat('es-MX', { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit', timeZone: 'America/Mexico_City' }).format(new Date(f.foto))} · Vegas sin comisión ${pctC(f.pv)} · pago justo ${fx(f.pago, 2)} · valor esperado ${evTxt(f.ev)}`)))))),
+    h('p', { class: 'sim-nota' }, 'El historial cuenta todo: también lo que falló.'));
 }
 function renderCombBuscar() { renderCombFiltros(); renderCombRes(); if (!$('#comb-edu').childElementCount) renderCombEdu(); }
 window.GLsim = { probConjunta, evento, picksTop };          // para las pruebas automáticas
