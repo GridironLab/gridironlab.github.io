@@ -729,6 +729,46 @@ ul.notes strong { color: var(--ink); font-weight: 600; }
 .pd-row .l { text-align: center; color: var(--muted); font-size: 12.5px; }
 .pd-btn { display: flex; gap: 10px; }
 .pd-pie { font-size: 12.5px; color: var(--muted); text-align: center; margin: 0; }
+/* ---------- Partido jugado: lo que se logró (Diseño V1.6) ---------- */
+.lg-cab { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.lg-k { font-family: var(--f-display); font-weight: 600; font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.lg-mar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; }
+.lg-eq { display: flex; flex-direction: column; align-items: center; gap: 2px; font-family: var(--f-display); font-weight: 600; letter-spacing: .06em; }
+.lg-eq b { font-size: 44px; line-height: 1; font-weight: 700; font-variant-numeric: tabular-nums; }
+.lg-eq.per b { color: var(--muted); }
+.lg-cmp { display: grid; grid-template-columns: auto 1fr 1fr; gap: 6px 12px; align-items: center; font-size: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+.lg-cmp > span { white-space: nowrap; min-height: 22px; display: inline-flex; align-items: center; gap: 6px; }
+.lg-cmp .g { color: var(--accent); font-weight: 600; }
+.lg-cmp .v { color: var(--vegas); font-weight: 600; }
+.lg-nota { margin: 0; font-size: 13px; color: var(--muted); }
+.lg-nota b { color: var(--ink); }
+.lg { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.lg-tit { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: 22px; letter-spacing: .04em; text-transform: uppercase; }
+.lg-eqh { display: flex; align-items: center; gap: 8px; margin-top: 4px; font-family: var(--f-display); font-size: 17px; letter-spacing: .06em; }
+.lg-j { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.lg-h { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.lg-n { font-weight: 600; font-size: 15px; min-width: 0; overflow-wrap: anywhere; }
+.lg-r { margin-left: auto; flex: none; display: flex; align-items: baseline; gap: 5px; white-space: nowrap; }
+.lg-r b.num { font-family: var(--f-data); font-weight: 700; font-size: 26px; line-height: 1; font-variant-numeric: tabular-nums; }
+.lg-r .u { font-size: 12.5px; color: var(--muted); }
+.lg-r .m { font-size: 19px; }
+.lg-r.ok b { color: var(--good); }
+.lg-r.no b { color: var(--bad); }
+.lg-met { position: relative; height: 22px; }
+.lg-met::before { content: ""; position: absolute; left: 0; right: 0; top: 8px; height: 8px; border-radius: 4px; background: var(--surface-2); }
+.lg-met i { position: absolute; left: 0; top: 8px; height: 8px; border-radius: 4px; }
+.lg-met i.ok { background: var(--good); }
+.lg-met i.no { background: var(--bad); }
+.lg-met s { position: absolute; top: 1px; width: 3px; height: 22px; margin-left: -1.5px; border-radius: 2px; background: var(--accent); }
+.lg-pie { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; color: var(--muted); margin-top: -3px; }
+.lg-l::before { content: ""; display: inline-block; width: 3px; height: 11px; border-radius: 2px; background: var(--accent); vertical-align: -1px; margin-right: 5px; }
+.lg-ch { display: flex; flex-wrap: wrap; gap: 5px; }
+.lg .lchip.no { color: var(--bad); border-color: var(--bad); }
+.lg-td { display: inline-flex; align-items: center; font-family: var(--f-display); font-weight: 700; font-size: 13.5px; letter-spacing: .05em; text-transform: uppercase; padding: 2px 9px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line-2); color: var(--ink); white-space: nowrap; }
+.lg-j.nj { border-style: dashed; background: transparent; }
+.lg-j.nj .lg-n { color: var(--muted); font-weight: 400; }
+.lg-nj { margin-left: auto; flex: none; font-size: 12.5px; color: var(--muted); border: 1px dashed var(--line-2); border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+.lg-antes { margin-top: 6px; }
 /* ---------- Jugadores en lista con ficha (Diseño V1.3) ---------- */
 .players.lista { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 8px; }
 .pl.compacta { padding: 0; gap: 0; }
@@ -830,6 +870,8 @@ ul.notes strong { color: var(--ink); font-weight: 600; }
   .cb-card .cb-sello { animation: cbSello .45s .25s cubic-bezier(.2,.8,.2,1) both; }
   .cb-cols .col i { transform-origin: bottom; animation: cbGrowY .6s cubic-bezier(.2,.8,.2,1) both; }
   .cb-grid i { animation: glPop .3s both; }
+  /* Partido jugado: la barra de lo que hizo cada jugador crece desde la izquierda */
+  .lg-met i { transform-origin: left; animation: glGrowX .7s cubic-bezier(.2,.8,.2,1) both; }
   /* cada botón se hunde un poco al tocarlo */
   .btn-plan, .pk-btn, .sim-calc, .dcard, .nav-b, .tab, .seg button, .sport.on { transition: transform .12s ease-out; }
   .btn-plan:active, .pk-btn:active, .sim-calc:active, .dcard:active, .nav-b:active, .tab:active, .seg button:active, .sport.on:active { transform: scale(.96); }
@@ -1223,6 +1265,7 @@ function filaProb(icon, lab, p, g, spread) {
 function qbLinea(g) {
   const qb = (eq) => D.jugadores.find((j) => j.pos === 'QB' && j.equipo === eq && j.partido === g.id);
   const t = (j) => j ? [h('b', {}, j.nombre), avisoLesion(j) ? ' ⚠' : ''] : 'por definir';
+  if (!qb(g.visita) && !qb(g.local) && (finalDe(g) || logroDe(g))) return h('div', { class: 'qbs', hidden: '' });      // ya se jugó: "por definir" sería falso
   return h('div', { class: 'qbs' }, h('span', {}, 'QB ', ...[].concat(t(qb(g.visita)))), h('span', {}, 'QB ', ...[].concat(t(qb(g.local)))));
 }
 const sg = (x, d = 1) => (x > 0 ? '+' : x < 0 ? '−' : '') + Math.abs(x * 100).toFixed(d) + '%';
@@ -3233,9 +3276,60 @@ function planPlegable(g) {
       h('div', { class: 'pd-rows' }, ...G.filas, G.q ? h('p', { class: 'pd-nota' }, 'EPA = puntos esperados que suma cada jugada. ', G.q) : null)); d.open = i === 0; return d; }),
     nota);
 }
+// ---------- PARTIDO JUGADO (Diseño V1.6): lo que se logró ----------
+// Solo acomoda lo que ya trae D.resultados (lo mismo que pinta Resultados): el final, GL y Las Vegas, y cada línea contra lo que hizo el jugador.
+const finalDe = (g) => { const S = D.resultados && D.resultados.partidos_sem && D.resultados.partidos_sem[String(D.semana)]; return (S && S.find((x) => x.local === g.local && x.visita === g.visita)) || null; };
+const logroDe = (g) => { const L = D.resultados && D.resultados.lineas && D.resultados.lineas[String(D.semana)]; return (L && L.find((x) => x.game_id === g.id)) || null; };
+const lineaTxt = (x, min = 0) => fx(x, Math.max(min, Number.isInteger(x) ? 0 : Number.isInteger(Math.round(x * 1e6) / 1e5) ? 1 : 2));      // la línea exacta: nunca redondea lo que trae el dato
+const LG_UNI = { passing_yards: 'yds de pase', rushing_yards: 'yds por tierra', receiving_yards: 'yds recibiendo' };
+function tarjetaFinal(g, F) {
+  const lado = (p) => (p >= .5 ? g.local : g.visita), marca = (ok) => h('span', { class: 'mark ' + (ok ? 'ok' : 'no') }, ok ? '✓' : '✗');
+  const eq = (ab, pts, gano) => h('div', { class: 'lg-eq' + (gano ? '' : ' per') }, escudo(ab, 34), h('b', {}, String(pts)), h('span', {}, ab));
+  return h('div', { class: 'pd-card lg-final', id: 'pd-final' },
+    h('div', { class: 'lg-cab' }, h('span', { class: 'lg-k' }, 'Marcador final'), h('span', { class: 'cb-sello chico' }, 'Jugado')),
+    h('div', { class: 'lg-mar' }, eq(g.visita, F.pv, F.pv > F.pl), h('span', { class: 'lg-k', 'aria-hidden': 'true' }, '—'), eq(g.local, F.pl, F.pl > F.pv)),
+    h('div', { class: 'lg-cmp' },
+      h('span', {}), h('span', { class: 'lg-k g' }, 'GL'), h('span', { class: 'lg-k v' }, 'Las Vegas'),
+      h('span', { class: 'lg-k' }, 'Ganador'),
+      h('span', { class: 'g' }, `${lado(F.p_gl)} ${pct(Math.max(F.p_gl, 1 - F.p_gl))} `, marca(F.ok_gl)),
+      F.p_vegas == null ? h('span', { class: 'v' }, '—') : h('span', { class: 'v' }, `${lado(F.p_vegas)} ${pct(Math.max(F.p_vegas, 1 - F.p_vegas))} `, marca(F.ok_vegas)),
+      ...(F.s_gl == null ? [] : [h('span', { class: 'lg-k' }, 'Spread'), h('span', { class: 'g' }, sprTxt(g, F.s_gl)), h('span', { class: 'v' }, sprTxt(g, F.s_vegas))])),
+    h('p', { class: 'lg-nota' }, F.fuente === 'en vivo' ? 'Lo que decían GL y Las Vegas antes del kickoff, guardado en vivo.' : 'Lo que decían GL y Las Vegas antes del kickoff (reconstruido).'));
+}
+function seccionLogro(g, J) {
+  const cab = h('div', { class: 'lg-cab' }, h('h3', { class: 'lg-tit' }, 'Lo que se logró'),
+    J ? h('span', { class: 'tag-src' }, J.fuente === 'en vivo' ? 'Guardado en vivo' : 'Reconstruido') : h('span', { class: 'cb-sello chico' }, 'Pendiente'));
+  if (!J) return h('section', { class: 'lg', id: 'pd-logro', 'data-estado': 'pendiente' }, cab,
+    h('p', { class: 'lg-nota' }, 'Todavía no llegan las estadísticas de los jugadores de este partido. Normalmente se publican a la mañana siguiente; aquí va a aparecer cada línea de GL contra lo que hizo el jugador.'));
+  const total = J.jugadores.reduce((a, j) => a + j.lineas.length, 0), sup = J.jugadores.reduce((a, j) => a + j.lineas.filter((l) => l.ok).length, 0);
+  const fuera = J.no_jugaron || [];                 // estaban en la última foto y no jugaron: no tienen líneas calificadas ni entran en la cuenta
+  // lo que pasó, tal cual viene: TD que lanzó (solo QB) y TD que anotó. Son cosas distintas, no se suman, y no llevan palomita
+  const hechos = (j) => [[j.td_pase, 'Lanzó'], [j.td_real, 'Anotó']].filter(([n]) => Number.isInteger(n) && n > 0).map(([n, v]) => h('span', { class: 'lg-td' }, `${v} ${n} TD`));
+  const noJugo = (x) => h('article', { class: 'lg-j nj', 'data-nombre': x.nombre },
+    h('div', { class: 'lg-h' }, h('span', { class: 'lg-n' }, x.nombre, ' ', h('span', { class: 'count' }, x.pos)), h('span', { class: 'lg-nj' }, 'No jugó · no cuenta')));
+  const ficha = (l) => h('span', { class: 'lchip ' + (l.ok ? 'ok' : 'no') }, l.stat === 'td' ? `TD (${pct(l.linea)}) ${l.ok ? '✓ anotó' : '✗'}`
+    : `${LSTAT[l.stat]} ${lineaTxt(l.linea, l.stat === 'fantasy' || l.stat === 'receptions' ? 1 : 0)} → ${fx(l.real, l.stat === 'fantasy' ? 1 : 0)} ${l.ok ? '✓' : '✗'}`);
+  const jug = (j) => {
+    const m = j.lineas.find((l) => LG_UNI[l.stat]), otros = j.lineas.filter((l) => l !== m), kids = [];
+    if (m) { const tope = Math.max(m.linea, m.real) * 1.12 || 1, d = Math.round((m.real - m.linea) * 10) / 10;
+      kids.push(h('div', { class: 'lg-met', 'aria-hidden': 'true' }, h('i', { class: m.ok ? 'ok' : 'no', style: `width:${(m.real / tope * 100).toFixed(1)}%` }), h('s', { style: `left:${(m.linea / tope * 100).toFixed(1)}%` })),
+        h('div', { class: 'lg-pie' }, h('span', { class: 'lg-l' }, `Línea GL ${lineaTxt(m.linea)}`), h('span', { class: 'lg-d' }, `${d >= 0 ? '+' : '−'}${lineaTxt(Math.abs(d))} contra su línea`))); }
+    return h('article', { class: 'lg-j', 'data-nombre': j.nombre },
+      h('div', { class: 'lg-h' }, h('span', { class: 'lg-n' }, j.nombre, ' ', h('span', { class: 'count' }, j.pos)),
+        m ? h('span', { class: 'lg-r ' + (m.ok ? 'ok' : 'no') }, h('b', { class: 'num' }, fx(m.real, 0)), h('span', { class: 'u' }, LG_UNI[m.stat]), h('b', { class: 'm' }, m.ok ? '✓' : '✗')) : null),
+      ...kids, otros.length || hechos(j).length ? h('div', { class: 'lg-ch' }, ...hechos(j), ...otros.map(ficha)) : null);
+  };
+  const equipo = (ab) => { const js = J.jugadores.filter((j) => j.equipo === ab), nj = fuera.filter((x) => x.equipo === ab);
+    return js.length || nj.length ? [h('div', { class: 'lg-eqh' }, escudo(ab, 20), h('b', {}, ab)), ...js.map(jug), ...nj.map(noJugo)] : []; };
+  return h('section', { class: 'lg', id: 'pd-logro', 'data-estado': 'calificado' }, cab,
+    h('p', { class: 'lg-nota' }, h('b', { id: 'lg-cuenta' }, `${sup} de ${total} líneas superadas.`),
+      fuera.length ? h('span', { id: 'lg-fuera' }, ` ${fuera.length} no ${fuera.length === 1 ? 'jugó y no cuenta' : 'jugaron y no cuentan'}.`) : null,
+      ' Cada línea es la que GL guardó antes del kickoff. Superar la línea no es "acertar": la línea es el punto medio y se espera superarla la mitad de las veces.'),
+    ...equipo(g.visita), ...equipo(g.local));
+}
 function renderPartido(g) {
   if (espejoVivo) { espejoVivo.disconnect(); espejoVivo = null; }
-  const R = D.resultados, dif = g.spread_elo - g.spread_vegas;
+  const R = D.resultados, dif = g.spread_elo - g.spread_vegas, fin = finalDe(g), logro = logroDe(g);
   const eq = (ab, casa) => { const t = h('span', {}, h('span', { class: 'ab' }, ab), h('span', { class: 'nm' }, apodo(ab) + (casa && !g.neutral ? ' · local' : '')));
     return h('div', { class: 'pd-eq' + (casa ? ' home' : ''), style: `background:${mezcla(COLOR[ab], .45)}` }, ...(casa ? [t, escudo(ab, 44)] : [escudo(ab, 44), t])); };
   // El marcador en vivo se pinta en la tarjeta de la lista; aquí se muestra una copia que se actualiza sola.
@@ -3252,6 +3346,9 @@ function renderPartido(g) {
     h('div', { class: 'pd-ban', id: 'pd-ban', 'data-juego': g.id }, eq(g.visita), eq(g.local, true)),
     h('div', { class: 'pd-meta' }, `${fecha(g.fecha)} · ${horaPartido(g)}${g.estadio && !g.neutral ? ' · ' + g.estadio : ''}`),
     vivo,
+    fin ? tarjetaFinal(g, fin) : null,
+    fin || logro ? seccionLogro(g, logro) : null,
+    fin || logro ? h('div', { class: 'lg-k lg-antes', id: 'pd-antes' }, 'La previa: lo que decía GL') : null,
     h('div', { class: 'pd-card', id: 'pd-prob' }, tarjetaProx(g, [g]).querySelector('.prox-p'), campo(g), qbLinea(g), bajasPartido(g),
       h('div', { class: 'pd-chips' }, h('span', { class: 'pd-chip' }, `Spread GL: ${sprTxt(g, g.spread_elo)}`), h('span', { class: 'pd-chip vg' }, `Spread Vegas: ${sprTxt(g, g.spread_vegas)}`),
         Math.abs(dif) >= 3 ? h('span', { class: 'chip diff' }, `GL y Vegas difieren ${Math.abs(dif).toFixed(1)} pts`) : h('span', { class: 'chip' }, `Total Vegas: ${fx(g.total, 1)} pts`))),
