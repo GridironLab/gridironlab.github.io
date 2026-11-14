@@ -1,0 +1,572 @@
+{
+"fuente": "The Odds API (región us; mediana de las casas)",
+"evento": "3c71d515b726f1096aabb435badb83fd",
+"kickoff_utc": "2026-11-15T18:00:00Z",
+"fecha_et": "2026-11-15",
+"visita": "KC",
+"local": "ATL",
+"foto_utc": "2026-11-14T07:23:19Z",
+"casas": [
+"betmgm",
+"betrivers",
+"bovada",
+"draftkings",
+"fanatics",
+"fanduel",
+"williamhill_us"
+],
+"lineas": [
+{
+"jugador": "Andrew Armstrong",
+"stat": "td",
+"linea": null,
+"p": 0.0667,
+"sin_vig": false,
+"casas": 7,
+"precio": 15.0
+},
+{
+"jugador": "Austin Hooper",
+"stat": "td",
+"linea": null,
+"p": 0.0833,
+"sin_vig": false,
+"casas": 7,
+"precio": 12.0
+},
+{
+"jugador": "Beaux Collins",
+"stat": "td",
+"linea": null,
+"p": 0.0357,
+"sin_vig": false,
+"casas": 7,
+"precio": 28.0
+},
+{
+"jugador": "Ben VanSumeren",
+"stat": "td",
+"linea": null,
+"p": 0.0244,
+"sin_vig": false,
+"casas": 1,
+"precio": 41.0
+},
+{
+"jugador": "Bijan Robinson",
+"stat": "receiving_yards",
+"linea": 28.5,
+"p": 0.5,
+"min": 27.5,
+"max": 29.5,
+"casas": 5,
+"precio_mas": 1.877,
+"precio_menos": 1.877
+},
+{
+"jugador": "Bijan Robinson",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.5881,
+"min": 3.5,
+"max": 4.5,
+"casas": 5,
+"precio_mas": 1.612,
+"precio_menos": 2.26
+},
+{
+"jugador": "Bijan Robinson",
+"stat": "rushing_yards",
+"linea": 86.5,
+"p": 0.4797,
+"min": 83.5,
+"max": 104.5,
+"casas": 5,
+"precio_mas": 1.952,
+"precio_menos": 1.8
+},
+{
+"jugador": "Bijan Robinson",
+"stat": "td",
+"linea": null,
+"p": 0.6875,
+"sin_vig": false,
+"casas": 7,
+"precio": 1.455
+},
+{
+"jugador": "Charlie Woerner",
+"stat": "td",
+"linea": null,
+"p": 0.0833,
+"sin_vig": false,
+"casas": 7,
+"precio": 12.0
+},
+{
+"jugador": "Chris Blair",
+"stat": "td",
+"linea": null,
+"p": 0.0588,
+"sin_vig": false,
+"casas": 7,
+"precio": 17.0
+},
+{
+"jugador": "Cyrus Allen",
+"stat": "td",
+"linea": null,
+"p": 0.1111,
+"sin_vig": false,
+"casas": 7,
+"precio": 9.0
+},
+{
+"jugador": "Drake London",
+"stat": "receiving_yards",
+"linea": 72.5,
+"p": 0.5,
+"min": 71.5,
+"max": 81.5,
+"casas": 5,
+"precio_mas": 1.877,
+"precio_menos": 1.877
+},
+{
+"jugador": "Drake London",
+"stat": "receptions",
+"linea": 5.5,
+"p": 0.5309,
+"min": 5.5,
+"max": 5.5,
+"casas": 5,
+"precio_mas": 1.778,
+"precio_menos": 1.976
+},
+{
+"jugador": "Drake London",
+"stat": "td",
+"linea": null,
+"p": 0.4098,
+"sin_vig": false,
+"casas": 7,
+"precio": 2.44
+},
+{
+"jugador": "Emmett Johnson",
+"stat": "td",
+"linea": null,
+"p": 0.5094,
+"sin_vig": false,
+"casas": 2,
+"precio": 1.965
+},
+{
+"jugador": "Jahan Dotson",
+"stat": "receiving_yards",
+"linea": 28.5,
+"p": 0.4998,
+"min": 28.5,
+"max": 28.5,
+"casas": 5,
+"precio_mas": 1.87,
+"precio_menos": 1.877
+},
+{
+"jugador": "Jahan Dotson",
+"stat": "receptions",
+"linea": 2.5,
+"p": 0.3823,
+"min": 1.5,
+"max": 2.5,
+"casas": 5,
+"precio_mas": 2.43,
+"precio_menos": 1.541
+},
+{
+"jugador": "Jahan Dotson",
+"stat": "td",
+"linea": null,
+"p": 0.1905,
+"sin_vig": false,
+"casas": 7,
+"precio": 5.25
+},
+{
+"jugador": "Jake Briningstool",
+"stat": "td",
+"linea": null,
+"p": 0.0526,
+"sin_vig": false,
+"casas": 7,
+"precio": 19.0
+},
+{
+"jugador": "Jalen Royals",
+"stat": "td",
+"linea": null,
+"p": 0.0769,
+"sin_vig": false,
+"casas": 7,
+"precio": 13.0
+},
+{
+"jugador": "Jared Wiley",
+"stat": "td",
+"linea": null,
+"p": 0.0385,
+"sin_vig": false,
+"casas": 7,
+"precio": 26.0
+},
+{
+"jugador": "Jaydn Ott",
+"stat": "td",
+"linea": null,
+"p": 0.087,
+"sin_vig": false,
+"casas": 1,
+"precio": 11.5
+},
+{
+"jugador": "Josh Downs",
+"stat": "receiving_yards",
+"linea": 21.5,
+"p": 0.5007,
+"min": 21.5,
+"max": 22.5,
+"casas": 4,
+"precio_mas": 1.877,
+"precio_menos": 1.877
+},
+{
+"jugador": "Josh Downs",
+"stat": "receptions",
+"linea": 2.5,
+"p": 0.4281,
+"min": 2.5,
+"max": 2.5,
+"casas": 3,
+"precio_mas": 2.21,
+"precio_menos": 1.632
+},
+{
+"jugador": "Josh Downs",
+"stat": "td",
+"linea": null,
+"p": 0.241,
+"sin_vig": false,
+"casas": 6,
+"precio": 4.15
+},
+{
+"jugador": "Kenneth Walker III",
+"stat": "td",
+"linea": null,
+"p": 0.6503,
+"sin_vig": false,
+"casas": 7,
+"precio": 1.538
+},
+{
+"jugador": "Khalil Herbert",
+"stat": "receiving_yards",
+"linea": 3.0,
+"p": 0.5031,
+"min": 2.5,
+"max": 3.5,
+"casas": 4
+},
+{
+"jugador": "Khalil Herbert",
+"stat": "receptions",
+"linea": 0.5,
+"p": 0.6116,
+"min": 0.5,
+"max": 0.5,
+"casas": 4,
+"precio_mas": 1.541,
+"precio_menos": 2.395
+},
+{
+"jugador": "Khalil Herbert",
+"stat": "rushing_yards",
+"linea": 9.5,
+"p": 0.5113,
+"min": 8.5,
+"max": 11.5,
+"casas": 5,
+"precio_mas": 1.833,
+"precio_menos": 1.909
+},
+{
+"jugador": "Khalil Herbert",
+"stat": "td",
+"linea": null,
+"p": 0.125,
+"sin_vig": false,
+"casas": 7,
+"precio": 8.0
+},
+{
+"jugador": "Kyle Pitts",
+"stat": "receiving_yards",
+"linea": 38.5,
+"p": 0.5005,
+"min": 35.5,
+"max": 48.5,
+"casas": 5,
+"precio_mas": 1.881,
+"precio_menos": 1.885
+},
+{
+"jugador": "Kyle Pitts",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.5691,
+"min": 3.5,
+"max": 3.5,
+"casas": 5,
+"precio_mas": 1.635,
+"precio_menos": 2.21
+},
+{
+"jugador": "Kyle Pitts",
+"stat": "td",
+"linea": null,
+"p": 0.303,
+"sin_vig": false,
+"casas": 7,
+"precio": 3.3
+},
+{
+"jugador": "Michael Penix Jr.",
+"stat": "passing_yards",
+"linea": 216.5,
+"p": 0.5,
+"min": 212.5,
+"max": 242.5,
+"casas": 5,
+"precio_mas": 1.87,
+"precio_menos": 1.87
+},
+{
+"jugador": "Michael Penix Jr.",
+"stat": "rushing_yards",
+"linea": 8.0,
+"p": 0.4949,
+"min": 7.5,
+"max": 8.5,
+"casas": 4
+},
+{
+"jugador": "Michael Penix Jr.",
+"stat": "td",
+"linea": null,
+"p": 0.0909,
+"sin_vig": false,
+"casas": 7,
+"precio": 11.0
+},
+{
+"jugador": "Nick Muse",
+"stat": "td",
+"linea": null,
+"p": 0.0357,
+"sin_vig": false,
+"casas": 7,
+"precio": 28.0
+},
+{
+"jugador": "Nikko Remigio",
+"stat": "td",
+"linea": null,
+"p": 0.0714,
+"sin_vig": false,
+"casas": 1,
+"precio": 14.0
+},
+{
+"jugador": "Noah Gray",
+"stat": "receiving_yards",
+"linea": 11.5,
+"p": 0.4986,
+"min": 10.5,
+"max": 11.5,
+"casas": 5,
+"precio_mas": 1.87,
+"precio_menos": 1.87
+},
+{
+"jugador": "Noah Gray",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.4247,
+"min": 1.5,
+"max": 1.5,
+"casas": 5,
+"precio_mas": 2.245,
+"precio_menos": 1.604
+},
+{
+"jugador": "Noah Gray",
+"stat": "td",
+"linea": null,
+"p": 0.129,
+"sin_vig": false,
+"casas": 7,
+"precio": 7.75
+},
+{
+"jugador": "Olamide Zaccheaus",
+"stat": "receiving_yards",
+"linea": 8.5,
+"p": 0.5051,
+"min": 7.5,
+"max": 9.5,
+"casas": 5,
+"precio_mas": 1.855,
+"precio_menos": 1.893
+},
+{
+"jugador": "Olamide Zaccheaus",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.4152,
+"min": 1.5,
+"max": 1.5,
+"casas": 5,
+"precio_mas": 2.25,
+"precio_menos": 1.606
+},
+{
+"jugador": "Olamide Zaccheaus",
+"stat": "td",
+"linea": null,
+"p": 0.1176,
+"sin_vig": false,
+"casas": 7,
+"precio": 8.5
+},
+{
+"jugador": "Patrick Mahomes",
+"stat": "passing_yards",
+"linea": 240.0,
+"p": 0.4737,
+"min": 235.5,
+"max": 269.5,
+"casas": 6
+},
+{
+"jugador": "Patrick Mahomes",
+"stat": "rushing_yards",
+"linea": 9.5,
+"p": 0.4979,
+"min": 8.5,
+"max": 10.5,
+"casas": 4,
+"precio_mas": 1.889,
+"precio_menos": 1.873
+},
+{
+"jugador": "Patrick Mahomes",
+"stat": "td",
+"linea": null,
+"p": 0.1538,
+"sin_vig": false,
+"casas": 7,
+"precio": 6.5
+},
+{
+"jugador": "Rashee Rice",
+"stat": "receiving_yards",
+"linea": 56.5,
+"p": 0.5031,
+"min": 54.5,
+"max": 66.5,
+"casas": 5,
+"precio_mas": 1.87,
+"precio_menos": 1.893
+},
+{
+"jugador": "Rashee Rice",
+"stat": "receptions",
+"linea": 5.5,
+"p": 0.4424,
+"min": 4.5,
+"max": 5.5,
+"casas": 5,
+"precio_mas": 2.155,
+"precio_menos": 1.667
+},
+{
+"jugador": "Rashee Rice",
+"stat": "td",
+"linea": null,
+"p": 0.3571,
+"sin_vig": false,
+"casas": 7,
+"precio": 2.8
+},
+{
+"jugador": "Travis Kelce",
+"stat": "receiving_yards",
+"linea": 48.0,
+"p": 0.4847,
+"min": 45.5,
+"max": 58.5,
+"casas": 6
+},
+{
+"jugador": "Travis Kelce",
+"stat": "receptions",
+"linea": 4.5,
+"p": 0.4341,
+"min": 3.5,
+"max": 4.5,
+"casas": 6,
+"precio_mas": 2.18,
+"precio_menos": 1.646
+},
+{
+"jugador": "Travis Kelce",
+"stat": "td",
+"linea": null,
+"p": 0.3226,
+"sin_vig": false,
+"casas": 7,
+"precio": 3.1
+},
+{
+"jugador": "Xavier Worthy",
+"stat": "receiving_yards",
+"linea": 26.5,
+"p": 0.5,
+"min": 26.5,
+"max": 27.5,
+"casas": 5,
+"precio_mas": 1.877,
+"precio_menos": 1.877
+},
+{
+"jugador": "Xavier Worthy",
+"stat": "receptions",
+"linea": 2.5,
+"p": 0.5291,
+"min": 2.5,
+"max": 2.5,
+"casas": 5,
+"precio_mas": 1.772,
+"precio_menos": 1.99
+},
+{
+"jugador": "Xavier Worthy",
+"stat": "td",
+"linea": null,
+"p": 0.25,
+"sin_vig": false,
+"casas": 7,
+"precio": 4.0
+}
+]
+}

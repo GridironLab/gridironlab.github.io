@@ -1,0 +1,629 @@
+{
+"fuente": "The Odds API (región us; mediana de las casas)",
+"evento": "b5700b4d938fd94429f60d4622cc9c0a",
+"kickoff_utc": "2026-11-15T18:00:00Z",
+"fecha_et": "2026-11-15",
+"visita": "MIA",
+"local": "IND",
+"foto_utc": "2026-11-14T07:23:19Z",
+"casas": [
+"betmgm",
+"betrivers",
+"bovada",
+"draftkings",
+"fanatics",
+"fanduel",
+"williamhill_us"
+],
+"lineas": [
+{
+"jugador": "Anthony Gould",
+"stat": "receiving_yards",
+"linea": 15.5,
+"p": 0.5,
+"min": 15.5,
+"max": 16.5,
+"casas": 4,
+"precio_mas": 1.877,
+"precio_menos": 1.877
+},
+{
+"jugador": "Anthony Gould",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.5616,
+"min": 1.5,
+"max": 1.5,
+"casas": 4,
+"precio_mas": 1.671,
+"precio_menos": 2.155
+},
+{
+"jugador": "Anthony Gould",
+"stat": "td",
+"linea": null,
+"p": 0.1429,
+"sin_vig": false,
+"casas": 7,
+"precio": 7.0
+},
+{
+"jugador": "Ashton Dulin",
+"stat": "receiving_yards",
+"linea": 14.5,
+"p": 0.5062,
+"min": 14.5,
+"max": 15.5,
+"casas": 4,
+"precio_mas": 1.862,
+"precio_menos": 1.909
+},
+{
+"jugador": "Ashton Dulin",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.4679,
+"min": 1.5,
+"max": 1.5,
+"casas": 4,
+"precio_mas": 2.001,
+"precio_menos": 1.757
+},
+{
+"jugador": "Ashton Dulin",
+"stat": "td",
+"linea": null,
+"p": 0.1176,
+"sin_vig": false,
+"casas": 7,
+"precio": 8.5
+},
+{
+"jugador": "Caleb Douglas",
+"stat": "receiving_yards",
+"linea": 41.5,
+"p": 0.5021,
+"min": 38.5,
+"max": 51.5,
+"casas": 5,
+"precio_mas": 1.885,
+"precio_menos": 1.901
+},
+{
+"jugador": "Caleb Douglas",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.4817,
+"min": 3.5,
+"max": 3.5,
+"casas": 5,
+"precio_mas": 1.965,
+"precio_menos": 1.784
+},
+{
+"jugador": "Caleb Douglas",
+"stat": "td",
+"linea": null,
+"p": 0.2222,
+"sin_vig": false,
+"casas": 7,
+"precio": 4.5
+},
+{
+"jugador": "Chris Bell",
+"stat": "receiving_yards",
+"linea": 13.5,
+"p": 0.4971,
+"min": 13.5,
+"max": 13.5,
+"casas": 1,
+"precio_mas": 1.847,
+"precio_menos": 1.826
+},
+{
+"jugador": "Chris Bell",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.5146,
+"min": 1.5,
+"max": 1.5,
+"casas": 1
+},
+{
+"jugador": "Chris Bell",
+"stat": "td",
+"linea": null,
+"p": 0.1538,
+"sin_vig": false,
+"casas": 1,
+"precio": 6.5
+},
+{
+"jugador": "DJ Giddens",
+"stat": "td",
+"linea": null,
+"p": 0.0476,
+"sin_vig": false,
+"casas": 6,
+"precio": 21.0
+},
+{
+"jugador": "DJ Herman",
+"stat": "td",
+"linea": null,
+"p": 0.0345,
+"sin_vig": false,
+"casas": 6,
+"precio": 29.0
+},
+{
+"jugador": "Daniel Jones",
+"stat": "passing_yards",
+"linea": 186.5,
+"p": 0.5,
+"min": 182.5,
+"max": 217.5,
+"casas": 5,
+"precio_mas": 1.87,
+"precio_menos": 1.87
+},
+{
+"jugador": "Daniel Jones",
+"stat": "rushing_yards",
+"linea": 7.5,
+"p": 0.5025,
+"min": 7.5,
+"max": 8.5,
+"casas": 5,
+"precio_mas": 1.833,
+"precio_menos": 1.909
+},
+{
+"jugador": "Daniel Jones",
+"stat": "td",
+"linea": null,
+"p": 0.1379,
+"sin_vig": false,
+"casas": 7,
+"precio": 7.25
+},
+{
+"jugador": "Deion Burks",
+"stat": "receiving_yards",
+"linea": 17.5,
+"p": 0.4945,
+"min": 16.5,
+"max": 18.5,
+"casas": 5,
+"precio_mas": 1.909,
+"precio_menos": 1.87
+},
+{
+"jugador": "Deion Burks",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.6049,
+"min": 1.5,
+"max": 2.5,
+"casas": 5,
+"precio_mas": 1.556,
+"precio_menos": 2.38
+},
+{
+"jugador": "Deion Burks",
+"stat": "td",
+"linea": null,
+"p": 0.16,
+"sin_vig": false,
+"casas": 7,
+"precio": 6.25
+},
+{
+"jugador": "Drew Ogletree",
+"stat": "td",
+"linea": null,
+"p": 0.0714,
+"sin_vig": false,
+"casas": 7,
+"precio": 14.0
+},
+{
+"jugador": "Greg Dulcich",
+"stat": "receiving_yards",
+"linea": 34.5,
+"p": 0.4989,
+"min": 31.5,
+"max": 44.5,
+"casas": 5,
+"precio_mas": 1.889,
+"precio_menos": 1.881
+},
+{
+"jugador": "Greg Dulcich",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.5052,
+"min": 3.5,
+"max": 3.5,
+"casas": 4,
+"precio_mas": 1.909,
+"precio_menos": 1.847
+},
+{
+"jugador": "Greg Dulcich",
+"stat": "td",
+"linea": null,
+"p": 0.1852,
+"sin_vig": false,
+"casas": 7,
+"precio": 5.4
+},
+{
+"jugador": "Jalen Tolbert",
+"stat": "td",
+"linea": null,
+"p": 0.0476,
+"sin_vig": false,
+"casas": 7,
+"precio": 21.0
+},
+{
+"jugador": "Jared Wayne",
+"stat": "td",
+"linea": null,
+"p": 0.0526,
+"sin_vig": false,
+"casas": 3,
+"precio": 19.0
+},
+{
+"jugador": "Jaylen Wright",
+"stat": "rushing_yards",
+"linea": 13.0,
+"p": 0.4959,
+"min": 11.5,
+"max": 13.5,
+"casas": 4
+},
+{
+"jugador": "Jaylen Wright",
+"stat": "td",
+"linea": null,
+"p": 0.1111,
+"sin_vig": false,
+"casas": 7,
+"precio": 9.0
+},
+{
+"jugador": "Jonathan Taylor",
+"stat": "receiving_yards",
+"linea": 21.5,
+"p": 0.4995,
+"min": 20.5,
+"max": 22.5,
+"casas": 6,
+"precio_mas": 1.877,
+"precio_menos": 1.855
+},
+{
+"jugador": "Jonathan Taylor",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.4705,
+"min": 3.5,
+"max": 3.5,
+"casas": 4,
+"precio_mas": 2.05,
+"precio_menos": 1.741
+},
+{
+"jugador": "Jonathan Taylor",
+"stat": "rushing_yards",
+"linea": 69.5,
+"p": 0.4979,
+"min": 65.5,
+"max": 89.5,
+"casas": 6,
+"precio_mas": 1.893,
+"precio_menos": 1.877
+},
+{
+"jugador": "Jonathan Taylor",
+"stat": "td",
+"linea": null,
+"p": 0.5349,
+"sin_vig": false,
+"casas": 7,
+"precio": 1.87
+},
+{
+"jugador": "Justin Joly",
+"stat": "td",
+"linea": null,
+"p": 0.0244,
+"sin_vig": false,
+"casas": 1,
+"precio": 41.0
+},
+{
+"jugador": "Kaytron Allen",
+"stat": "td",
+"linea": null,
+"p": 0.0667,
+"sin_vig": false,
+"casas": 5,
+"precio": 15.0
+},
+{
+"jugador": "Kevin Coleman Jr.",
+"stat": "receiving_yards",
+"linea": 16.5,
+"p": 0.4986,
+"min": 16.5,
+"max": 17.5,
+"casas": 4,
+"precio_mas": 1.87,
+"precio_menos": 1.87
+},
+{
+"jugador": "Kevin Coleman Jr.",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.5807,
+"min": 1.5,
+"max": 1.5,
+"casas": 4,
+"precio_mas": 1.614,
+"precio_menos": 2.255
+},
+{
+"jugador": "Kevin Coleman Jr.",
+"stat": "td",
+"linea": null,
+"p": 0.1333,
+"sin_vig": false,
+"casas": 7,
+"precio": 7.5
+},
+{
+"jugador": "Kyle McCord",
+"stat": "passing_yards",
+"linea": 160.5,
+"p": 0.4949,
+"min": 156.5,
+"max": 191.5,
+"casas": 6,
+"precio_mas": 1.889,
+"precio_menos": 1.851
+},
+{
+"jugador": "Kyle McCord",
+"stat": "rushing_yards",
+"linea": 7.5,
+"p": 0.498,
+"min": 7.5,
+"max": 7.5,
+"casas": 4,
+"precio_mas": 1.873,
+"precio_menos": 1.873
+},
+{
+"jugador": "Kyle McCord",
+"stat": "td",
+"linea": null,
+"p": 0.0909,
+"sin_vig": false,
+"casas": 7,
+"precio": 11.0
+},
+{
+"jugador": "Laquon Treadwell",
+"stat": "receiving_yards",
+"linea": 27.5,
+"p": 0.5042,
+"min": 27.5,
+"max": 29.5,
+"casas": 5,
+"precio_mas": 1.847,
+"precio_menos": 1.909
+},
+{
+"jugador": "Laquon Treadwell",
+"stat": "receptions",
+"linea": 2.5,
+"p": 0.4493,
+"min": 2.5,
+"max": 2.5,
+"casas": 5,
+"precio_mas": 2.185,
+"precio_menos": 1.645
+},
+{
+"jugador": "Laquon Treadwell",
+"stat": "td",
+"linea": null,
+"p": 0.25,
+"sin_vig": false,
+"casas": 7,
+"precio": 4.0
+},
+{
+"jugador": "Malik Washington",
+"stat": "receiving_yards",
+"linea": 33.5,
+"p": 0.4958,
+"min": 30.5,
+"max": 43.5,
+"casas": 5,
+"precio_mas": 1.909,
+"precio_menos": 1.877
+},
+{
+"jugador": "Malik Washington",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.5011,
+"min": 3.5,
+"max": 3.5,
+"casas": 6,
+"precio_mas": 1.917,
+"precio_menos": 1.833
+},
+{
+"jugador": "Malik Washington",
+"stat": "td",
+"linea": null,
+"p": 0.2326,
+"sin_vig": false,
+"casas": 7,
+"precio": 4.3
+},
+{
+"jugador": "Mo Alie-Cox",
+"stat": "td",
+"linea": null,
+"p": 0.1053,
+"sin_vig": false,
+"casas": 1,
+"precio": 9.5
+},
+{
+"jugador": "Nick Westbrook-Ikhine",
+"stat": "td",
+"linea": null,
+"p": 0.059,
+"sin_vig": false,
+"casas": 6,
+"precio": 17.0
+},
+{
+"jugador": "Ollie Gordon II",
+"stat": "receiving_yards",
+"linea": 6.5,
+"p": 0.4937,
+"min": 5.5,
+"max": 7.5,
+"casas": 4,
+"precio_mas": 1.906,
+"precio_menos": 1.859
+},
+{
+"jugador": "Ollie Gordon II",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.5207,
+"min": 1.5,
+"max": 1.5,
+"casas": 4,
+"precio_mas": 1.785,
+"precio_menos": 1.98
+},
+{
+"jugador": "Ollie Gordon II",
+"stat": "rushing_yards",
+"linea": 72.5,
+"p": 0.5,
+"min": 70.5,
+"max": 95.5,
+"casas": 5,
+"precio_mas": 1.877,
+"precio_menos": 1.877
+},
+{
+"jugador": "Ollie Gordon II",
+"stat": "td",
+"linea": null,
+"p": 0.5,
+"sin_vig": false,
+"casas": 7,
+"precio": 2.0
+},
+{
+"jugador": "Pharaoh Brown",
+"stat": "td",
+"linea": null,
+"p": 0.05,
+"sin_vig": false,
+"casas": 5,
+"precio": 20.0
+},
+{
+"jugador": "Seth McGowan",
+"stat": "rushing_yards",
+"linea": 24.5,
+"p": 0.5069,
+"min": 23.5,
+"max": 25.5,
+"casas": 5,
+"precio_mas": 1.855,
+"precio_menos": 1.909
+},
+{
+"jugador": "Seth McGowan",
+"stat": "td",
+"linea": null,
+"p": 0.2703,
+"sin_vig": false,
+"casas": 7,
+"precio": 3.7
+},
+{
+"jugador": "Seydou Traore",
+"stat": "td",
+"linea": null,
+"p": 0.0294,
+"sin_vig": false,
+"casas": 7,
+"precio": 34.0
+},
+{
+"jugador": "Tyler Warren",
+"stat": "receiving_yards",
+"linea": 46.5,
+"p": 0.498,
+"min": 44.5,
+"max": 56.5,
+"casas": 5,
+"precio_mas": 1.87,
+"precio_menos": 1.87
+},
+{
+"jugador": "Tyler Warren",
+"stat": "receptions",
+"linea": 5.5,
+"p": 0.562,
+"min": 5.5,
+"max": 5.5,
+"casas": 5,
+"precio_mas": 1.697,
+"precio_menos": 2.1
+},
+{
+"jugador": "Tyler Warren",
+"stat": "td",
+"linea": null,
+"p": 0.3448,
+"sin_vig": false,
+"casas": 7,
+"precio": 2.9
+},
+{
+"jugador": "Will Kacmarek",
+"stat": "td",
+"linea": null,
+"p": 0.0714,
+"sin_vig": false,
+"casas": 7,
+"precio": 14.0
+},
+{
+"jugador": "Will Mallory",
+"stat": "td",
+"linea": null,
+"p": 0.0556,
+"sin_vig": false,
+"casas": 7,
+"precio": 18.0
+}
+]
+}
