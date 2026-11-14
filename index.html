@@ -424,27 +424,45 @@ article.cb-card.valor { border: 1px solid var(--bol-line); border-left: 4px soli
 #comb-hist .juego-lin { border-left: 4px solid var(--line-2); border-radius: 12px; }
 /* ---------- Radar GL (picks individuales de la semana) ---------- */
 #radar { display: flex; flex-direction: column; gap: 16px; }
-@media (max-width: 600px) { #sim-chips { flex-wrap: wrap; } #sim-chips .btn-plan { flex: 1 1 34%; padding: 0 6px; font-size: 13.5px; letter-spacing: .02em; } }
+@media (max-width: 600px) { #sim-chips .larga { display: none; } #sim-chips .btn-plan { flex: 1 1 0; min-width: 0; padding: 0 4px; font-size: 13px; letter-spacing: .02em; white-space: normal; line-height: 1.05; overflow-wrap: anywhere; } }   /* las cuatro vistas en un renglón; si la letra de la marca no carga, la etiqueta se parte en dos en vez de salirse */
 @media (max-width: 380px) { #sim-chips .btn-plan { padding: 0 2px; font-size: 12.5px; letter-spacing: 0; } }
 #radar-seg { align-self: flex-start; max-width: 100%; }
 #radar-seg button { font-size: 15px; padding: 0 12px; }
-.rd-res { display: flex; flex-direction: column; gap: 8px; }
+.rd-res { display: flex; flex-direction: column; gap: 10px; }
 .rd-res .nota { color: var(--muted); font-size: 13px; margin: 0; }
+.rd-res .nota.ojo { border-left: 3px solid var(--line-2); padding: 2px 0 2px 10px; }
+.rd-res .rd-aviso, .rd-res .empty { padding: 9px 11px; text-align: left; font-size: 13px; color: var(--muted); background: var(--surface-2); border: 1px dashed var(--line-2); border-radius: 10px; }
 .rd-res h4 { margin: 6px 0 0; }
 .rd-cab { display: flex; justify-content: space-between; align-items: center; gap: 10px; min-height: 30px; }
-.rd-cab h3 { margin: 0; font-size: 18px; font-weight: 600; }
-.rd-suma { margin: 0; font-size: 16px; }
-.rd-suma b { font-size: 20px; color: var(--ink); }
+.rd-cab h3 { margin: 0; font-family: var(--f-display); font-size: 20px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.rd-sum { display: flex; flex-direction: column; gap: 7px; }
+.rd-sum .f { display: grid; grid-template-columns: minmax(0, 128px) minmax(0, 1fr) 52px; gap: 8px; align-items: center; font-size: 13.5px; }
+.rd-sum .t, .rd-meta .t { display: block; height: 10px; border-radius: 5px; background: var(--surface-2); overflow: hidden; }
+.rd-sum .t i, .rd-meta .t i { display: block; height: 100%; border-radius: 5px; background: var(--muted); }
+.rd-sum .g .t i { background: var(--accent); } .rd-sum .v .t i { background: var(--vegas); }
+.rd-sum .n { text-align: right; font-family: var(--f-data); font-weight: 700; font-size: 20px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rd-sum .g .n { color: var(--accent); } .rd-sum .v .n { color: var(--vegas); }
+.rd-meta { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+.rd-meta .rd-cab { min-height: 0; align-items: baseline; }
+.rd-meta b { color: var(--ink); font-size: 15px; white-space: nowrap; }
 .rd-lista { display: flex; flex-direction: column; gap: 8px; }
-.rd-pick { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px 10px; padding: 10px 12px; min-width: 0; background: var(--bol); border: 1px solid var(--bol-line); border-left: 4px solid var(--line-2); border-radius: 12px; }
+.rd-pick { display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; align-items: center; gap: 6px 9px; padding: 10px 12px; min-width: 0; background: var(--bol); border: 1px solid var(--bol-line); border-left: 4px solid var(--line-2); border-radius: 12px; }
 .rd-pick.dist { border-left-color: var(--accent); }
-@media (max-width: 600px) { .rd-pick { grid-template-columns: auto minmax(0, 1fr); } .rd-pick .cb-pp { grid-column: 2 / -1; justify-self: start; gap: 16px; } }
-.rd-n { min-width: 20px; text-align: right; font-size: 15px; color: var(--muted); }
-.rd-t { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.rd-t b { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
-.rd-t .sub { color: var(--muted); font-size: 12.5px; }
-.rd-x { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 14px; padding-top: 8px; border-top: 1px dashed var(--bol-line); color: var(--muted); font-size: 12.5px; }
-.rd-x b { color: var(--ink); font-size: 14px; }
+.rd-n { grid-area: 1 / 1; min-width: 22px; text-align: center; font-family: var(--f-display); font-weight: 700; font-size: 20px; color: var(--muted); }
+.rd-pick > .esc { grid-area: 1 / 2; min-width: 30px; }
+.rd-pick > .cb-pp { grid-area: 1 / 4; }
+.rd-t, .rd-t b { display: contents; font-weight: 400; }                 /* el texto del motor va en dos renglones de la misma cuadrícula */
+.rd-q { grid-area: 1 / 3; font-weight: 600; font-size: 15px; line-height: 1.2; min-width: 0; overflow-wrap: anywhere; }
+.rd-c { grid-row: 2; grid-column: 3 / -1; margin-top: -4px; font-size: 14px; line-height: 1.25; min-width: 0; overflow-wrap: anywhere; }
+.rd-p { color: var(--muted); font-size: 12.5px; }
+.rd-s, .rd-bars, .rd-x { grid-column: 1 / -1; }
+.rd-s { color: var(--muted); font-size: 12.5px; }
+.rd-bars { display: flex; flex-direction: column; gap: 3px; }
+.rd-bars .t { display: block; height: 6px; border-radius: 3px; background: var(--bol-track); overflow: hidden; }
+.rd-bars .t i { display: block; height: 100%; border-radius: 3px; }
+.rd-bars .g i { background: var(--accent); } .rd-bars .v i { background: var(--vegas); }
+.rd-x { display: flex; flex-wrap: wrap; gap: 2px 14px; color: var(--muted); font-size: 12.5px; }
+.rd-x b { color: var(--ink); font-family: var(--f-data); font-weight: 700; font-size: 14.5px; }
 .rd-tabla { width: 100%; border-collapse: collapse; font-size: 13px; }
 .rd-tabla th, .rd-tabla td { padding: 6px 8px; text-align: right; border-bottom: 1px solid var(--line); }
 .rd-tabla th { color: var(--muted); font-weight: 600; font-size: 12px; }
@@ -872,6 +890,8 @@ ul.notes strong { color: var(--ink); font-weight: 600; }
   .cb-grid i { animation: glPop .3s both; }
   /* Partido jugado: la barra de lo que hizo cada jugador crece desde la izquierda */
   .lg-met i { transform-origin: left; animation: glGrowX .7s cubic-bezier(.2,.8,.2,1) both; }
+  /* Radar GL: las barras de GL y Las Vegas crecen juntas desde la izquierda */
+  .rd-bars .t i, .rd-sum .t i, .rd-meta .t i { transform-origin: left; animation: glGrowX .6s cubic-bezier(.2,.8,.2,1) both; }
   /* cada botón se hunde un poco al tocarlo */
   .btn-plan, .pk-btn, .sim-calc, .dcard, .nav-b, .tab, .seg button, .sport.on { transition: transform .12s ease-out; }
   .btn-plan:active, .pk-btn:active, .sim-calc:active, .dcard:active, .nav-b:active, .tab:active, .seg button:active, .sport.on:active { transform: scale(.96); }
@@ -915,7 +935,7 @@ ul.notes strong { color: var(--ink); font-weight: 600; }
   <!-- =============== SIMULADOR =============== -->
   <section id="view-simulador" class="sec" hidden>
     <div class="semsel" id="sim-chips">
-      <button class="btn-plan" data-v="buscar" aria-expanded="true">Buscar combinación</button>
+      <button class="btn-plan" data-v="buscar" aria-expanded="true">Buscar<span class="larga">&nbsp;combinación</span></button>
       <button class="btn-plan" data-v="radar" aria-expanded="false">Radar GL</button>
       <button class="btn-plan" data-v="picks" aria-expanded="false">Arma la tuya</button>
       <button class="btn-plan" data-v="historial" aria-expanded="false">Historial</button>
@@ -2862,12 +2882,23 @@ window.GLradar = { listas: listasRadar, armar: armarRadar, foto: fotoRadar, reco
 // ---------- Radar GL: interfaz. Solo pinta lo que calculan listasRadar() y recordRadar() ----------
 const RADAR_UI = { lista: 'probables' };
 const unoRadar = (x) => fx(x, 1);
+function partesRadar(p, sub) {     // el texto del motor partido en "quién", "qué" y su paréntesis final, solo para acomodarlo: juntos son el texto exacto
+  const m = /^(.*?)( \([^()]*\))$/.exec(p.texto), base = m ? m[1] : p.texto, par = m ? m[2] : '', i = p.pk.jugador ? base.indexOf(': ') : -1;
+  const yaEsta = par && sub.toLowerCase().includes(par.slice(2, -1).toLowerCase());        // lo que ya dice el renglón de abajo no se repite a la vista
+  return { quien: i > 0 ? base.slice(0, i) : base, sep: i > 0 ? ': ' : '', que: i > 0 ? base.slice(i + 2) : '', par, yaEsta };
+}
 function filaRadar(p) {
   const g = juegoDe(p.juego), sub = [COMB_MERC[p.merc] || p.merc, g ? `${g.visita} @ ${g.local}` : null, p.casas ? `${p.casas} casas` : null].filter(Boolean).join(' · ');
+  const t = partesRadar(p, sub), ab = equipoPierna(p), tira = (c, x) => h('span', { class: 't ' + c }, h('i', { style: `width:${(x * 100).toFixed(1)}%` }));
   return h('article', { class: 'rd-pick' + (p.lista === 'radar' ? ' dist' : ''), 'data-clave': p.clave },
     h('span', { class: 'rd-n num' }, String(p.rango)),
-    h('div', { class: 'rd-t' }, h('b', {}, p.texto), h('span', { class: 'sub' }, sub)),
+    ab ? escudo(ab, 30) : h('span', { class: 'esc', 'aria-hidden': 'true' }),
+    h('div', { class: 'rd-t' }, h('b', {}, h('span', { class: 'rd-q' }, t.quien), t.sep ? h('span', { class: 'sr' }, t.sep) : null,
+      t.que || (t.par && !t.yaEsta) ? h('span', { class: 'rd-c' }, t.que, t.par && !t.yaEsta ? h('span', { class: 'rd-p' }, t.par) : null) : null,
+      t.par && t.yaEsta ? h('span', { class: 'sr' }, t.par) : null)),
     h('div', { class: 'cb-pp' }, h('span', { class: 'g' }, h('i', {}, 'GL'), h('b', {}, pctC(p.pG))), h('span', { class: 'v' }, h('i', {}, p.aprox ? 'Vegas ≈' : 'Vegas'), h('b', {}, pctC(p.pV)))),
+    h('span', { class: 'rd-s' }, sub),
+    h('div', { class: 'rd-bars', 'aria-hidden': 'true' }, tira('g', p.pG), tira('v', p.pV)),
     h('div', { class: 'rd-x' },
       h('span', {}, 'Diferencia ', h('b', { class: 'num' }, sgn((p.pG - p.pV) * 100))),
       h('span', {}, 'Pago justo ', h('b', { class: 'num' }, fx(p.pagoJusto, 2))),
@@ -2887,17 +2918,21 @@ function renderRadar() {
   const F = (D.radar && D.radar.filas) || [], Rp = recordRadar(F, 'probables'), Rd = recordRadar(F, 'radar');
   const opcion = (id, t) => h('button', { type: 'button', 'data-l': id, 'aria-pressed': String(RADAR_UI.lista === id), onclick: () => { RADAR_UI.lista = id; renderRadar(); } }, t);
   const sello = (t, c) => h('span', { class: 'cb-sello chico' + (c ? ' ' + c : '') }, t);
-  const falta = n < RADAR_N ? h('p', { class: 'nota', id: 'radar-falta' }, `Hoy hay ${n} de ${RADAR_N}. Las líneas de jugadores llegan unas 36 horas antes de cada partido (${R.conProps} de ${R.partidos} ${R.partidos === 1 ? 'partido las tiene' : 'partidos las tienen'}): la lista del domingo se llena el sábado.`) : null;
+  const parte = (x, de) => (de > 0 ? Math.min(100, x / de * 100) : 0).toFixed(1);          // qué tanto de la barra: lo esperado entre el total
+  const falta = n < RADAR_N ? h('p', { class: 'nota rd-aviso', id: 'radar-falta' }, `Hoy hay ${n} de ${RADAR_N}. Las líneas de jugadores llegan unas 36 horas antes de cada partido (${R.conProps} de ${R.partidos} ${R.partidos === 1 ? 'partido las tiene' : 'partidos las tienen'}): la lista del domingo se llena el sábado.`) : null;
   const notas = esDist
     ? [h('p', { class: 'nota' }, `Aquí van los picks donde GL ve ${fx(RADAR_DIF * 100)} puntos o más de probabilidad arriba de Las Vegas sin comisión, de mayor a menor diferencia. Que GL vea distinto no es una oportunidad: hasta hoy Las Vegas ha acertado más.`),
-       h('p', { class: 'nota' }, `Ojo con los "menos": en líneas de jugadores Las Vegas marca cerca de 50% de "más" y lo real ha sido 46–49%, así que un "menos" puede cumplirse por ese sesgo general y no porque GL vea algo. Por eso este récord se compara también contra decir siempre "menos". Hoy ${X.menos} de ${n} son "menos".`)]
+       h('p', { class: 'nota ojo' }, `Ojo con los "menos": en líneas de jugadores Las Vegas marca cerca de 50% de "más" y lo real ha sido 46–49%, así que un "menos" puede cumplirse por ese sesgo general y no porque GL vea algo. Por eso este récord se compara también contra decir siempre "menos". Hoy ${X.menos} de ${n} son "menos".`)]
     : [h('p', { class: 'nota' }, 'Ordenados por la probabilidad de GL. Probable no es lo mismo que ventaja: son sobre todo favoritos, y líneas donde GL se aleja de Las Vegas (ahí GL suele pecar de confiado: por eso van las dos sumas).')];
   box.replaceChildren(
     h('p', { class: 'lead' }, 'Los picks ', h('strong', {}, 'individuales'), ' de la semana, uno por uno: cada uno se lee y se califica solo (no son combinadas). Junto a la probabilidad de GL va la de Las Vegas sin comisión. Es análisis, no es una recomendación para apostar.'),
     h('div', { class: 'seg', id: 'radar-seg', role: 'group', 'aria-label': 'Lista' }, opcion('probables', 'Más probables'), opcion('radar', 'Radar: GL ve distinto')),
     h('div', { class: 'card rd-res', id: 'radar-resumen', 'data-lista': RADAR_UI.lista },
       h('div', { class: 'rd-cab' }, h('span', { class: 'cb-kicker' }, `Semana ${D.semana} · ${n} ${n === 1 ? 'pick' : 'picks'}`), esDist ? sello('En prueba') : null),
-      h('p', { class: 'rd-suma' }, `De estos ${n}, GL espera acertar ~`, h('b', { class: 'num', id: 'radar-espera-gl' }, unoRadar(X.esperaGL)), '. Las Vegas sin comisión esperaría ~', h('b', { class: 'num', id: 'radar-espera-vegas' }, unoRadar(X.esperaVegas)), '.'),
+      h('div', { class: 'rd-sum', id: 'radar-sumas' },
+        h('div', { class: 'f g' }, h('span', {}, 'GL espera acertar'), h('span', { class: 't' }, h('i', { style: `width:${parte(X.esperaGL, n)}%` })), h('span', { class: 'n' }, '~', h('b', { class: 'num', id: 'radar-espera-gl' }, unoRadar(X.esperaGL)))),
+        h('div', { class: 'f v' }, h('span', {}, 'Las Vegas esperaría'), h('span', { class: 't' }, h('i', { style: `width:${parte(X.esperaVegas, n)}%` })), h('span', { class: 'n' }, '~', h('b', { class: 'num', id: 'radar-espera-vegas' }, unoRadar(X.esperaVegas)))),
+        h('p', { class: 'nota', id: 'radar-de' }, `De ${n} ${n === 1 ? 'pick' : 'picks'}. Las Vegas va sin comisión.`)),
       ...notas,
       h('p', { class: 'nota', id: 'radar-pesos' }, sinPeso
         ? 'Valor esperado de cada pick con los pesos vigentes: 0.0%. Todos los pesos están en 0 porque GL no ha demostrado saber más que Las Vegas en ningún mercado.'
@@ -2914,6 +2949,9 @@ function renderRadar() {
            h('h4', { class: 'cb-kicker' }, 'Radar: GL ve distinto'), tablaRadar(Rd),
            h('p', { class: 'nota', id: 'radar-brier-d' }, Rd.n ? `Brier: GL ${fx(Rd.brierGL, 4)} · Las Vegas ${fx(Rd.brierVegas, 4)}.` + (Rd.ou ? ` En más/menos de jugadores: el Radar acertó ${Rd.ouAciertos} de ${Rd.ou}; decir siempre "menos" habría acertado ${Rd.ouMenos}.` : '') : 'Sin picks calificados.'),
            Rd.ic ? h('p', { class: 'nota', id: 'radar-ic' }, `Intervalo de 95% (remuestreando partidos): contra lo que esperaba Las Vegas ${sgn(Rd.ic.vegas[0] * 100)} a ${sgn(Rd.ic.vegas[1] * 100)} puntos por pick; contra "siempre menos" ${sgn(Rd.ic.menos[0])} a ${sgn(Rd.ic.menos[1])} aciertos.`) : null]),
+      h('div', { class: 'rd-meta', id: 'radar-meta' },
+        h('div', { class: 'rd-cab' }, h('span', {}, 'Picks calificados del Radar para poder hablar de ventaja'), h('b', { class: 'num' }, `${Rd.n} de ${RADAR_META}`)),
+        h('span', { class: 't', 'aria-hidden': 'true' }, h('i', { style: `width:${parte(Rd.n, RADAR_META)}%` }))),
       h('p', { class: 'nota', id: 'radar-regla' }, `Regla fijada antes de ver resultados: el Radar solo se declara ventaja si, con ${RADAR_META} picks calificados o más, su intervalo queda arriba de lo que esperaba Las Vegas y arriba de "siempre menos". Lleva ${Rd.n}; mientras tanto, la etiqueta es "en prueba".`)));
 }
 // ===================== PICKS: interfaz de "Buscar combinación" =====================
