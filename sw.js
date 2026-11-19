@@ -5,7 +5,11 @@
      nueva; si no hay señal, muestra la última que se guardó.
    - Íconos y fuentes (casi nunca cambian): CACHÉ PRIMERO, para abrir rápido. */
 const CACHE = 'gridiron-v1';
-const BASICOS = ['./', './manifest.webmanifest', './iconos/icono-192.png', './iconos/icono-512.png', './iconos/favicon.svg'];
+// Las fuentes locales del diseño nuevo (interruptor ?diseno=2) se guardan desde la instalación:
+// así la app nueva abre con su letra aunque no haya señal. Son ~50 KB.
+const FUENTES = ['./fuentes/onest-latin-400-normal.woff2', './fuentes/onest-latin-500-normal.woff2', './fuentes/onest-latin-600-normal.woff2',
+  './fuentes/escudo-barlow-condensed-700-mayusculas.woff2'];
+const BASICOS = ['./', './manifest.webmanifest', './iconos/icono-192.png', './iconos/icono-512.png', './iconos/favicon.svg', ...FUENTES];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(BASICOS)).then(() => self.skipWaiting()));
