@@ -4,15 +4,20 @@
    - La página (datos del día): RED PRIMERO. Siempre intenta bajar la versión
      nueva; si no hay señal, muestra la última que se guardó.
    - Íconos y fuentes (casi nunca cambian): CACHÉ PRIMERO, para abrir rápido. */
-const CACHE = 'gridiron-v1';
+// El nombre del caché se sube cuando cambian los archivos que se guardan "caché primero" (íconos, manifiesto, fuentes):
+// al activarse, el service worker nuevo borra los cachés con otro nombre y así los cels que ya tenían la app instalada
+// reciben los archivos nuevos. v2 = etapa 7 del rediseño (21 nov 2026): íconos y manifiesto del logo "Balón partido".
+const CACHE = 'gridiron-v2';
 // Las fuentes locales del diseño nuevo (interruptor ?diseno=2) se guardan desde la instalación:
 // así la app nueva abre con su letra aunque no haya señal. Son ~50 KB.
 const FUENTES = ['./fuentes/onest-latin-400-normal.woff2', './fuentes/onest-latin-500-normal.woff2', './fuentes/onest-latin-600-normal.woff2',
   './fuentes/escudo-barlow-condensed-700-mayusculas.woff2'];
-const BASICOS = ['./', './manifest.webmanifest', './iconos/icono-192.png', './iconos/icono-512.png', './iconos/favicon.svg', ...FUENTES];
+const ICONOS = ['./iconos/icono-192.png', './iconos/icono-512.png', './iconos/icono-maskable-512.png', './iconos/icono-180.png', './iconos/favicon.svg'];
+const BASICOS = ['./', './manifest.webmanifest', ...ICONOS, ...FUENTES];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(BASICOS)).then(() => self.skipWaiting()));
+  // cache: 'reload' = se bajan de la red, no del caché HTTP del navegador (que podría tener todavía el ícono anterior)
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(BASICOS.map((u) => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {
