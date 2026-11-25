@@ -1,0 +1,598 @@
+{
+"fuente": "The Odds API (región us; mediana de las casas)",
+"evento": "ffaa06af56a7137d4b078c5c46c0b730",
+"kickoff_utc": "2026-11-26T21:30:00Z",
+"fecha_et": "2026-11-26",
+"visita": "PHI",
+"local": "DAL",
+"foto_utc": "2026-11-25T13:40:49Z",
+"casas": [
+"betmgm",
+"betonlineag",
+"betrivers",
+"bovada",
+"circasports",
+"draftkings",
+"fanatics",
+"fanduel",
+"williamhill_us"
+],
+"lineas": [
+{
+"jugador": "Brevyn Spann-Ford",
+"stat": "receiving_yards",
+"linea": 14.5,
+"p": 0.5005,
+"min": 13.5,
+"max": 14.5,
+"casas": 5,
+"precio_mas": 1.873,
+"precio_menos": 1.873
+},
+{
+"jugador": "Brevyn Spann-Ford",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.5974,
+"min": 1.5,
+"max": 1.5,
+"casas": 5,
+"precio_mas": 1.575,
+"precio_menos": 2.35
+},
+{
+"jugador": "Brevyn Spann-Ford",
+"stat": "td",
+"linea": null,
+"p": 0.2174,
+"sin_vig": false,
+"casas": 8,
+"precio": 4.6
+},
+{
+"jugador": "Britain Covey",
+"stat": "td",
+"linea": null,
+"p": 0.0385,
+"sin_vig": false,
+"casas": 8,
+"precio": 26.0
+},
+{
+"jugador": "Camden Brown",
+"stat": "td",
+"linea": null,
+"p": 0.0476,
+"sin_vig": false,
+"casas": 7,
+"precio": 21.0
+},
+{
+"jugador": "CeeDee Lamb",
+"stat": "receiving_yards",
+"linea": 89.5,
+"p": 0.5,
+"min": 87.5,
+"max": 110.5,
+"casas": 7,
+"precio_mas": 1.873,
+"precio_menos": 1.873
+},
+{
+"jugador": "CeeDee Lamb",
+"stat": "receptions",
+"linea": 7.5,
+"p": 0.4612,
+"min": 7.5,
+"max": 7.5,
+"casas": 7,
+"precio_mas": 2.055,
+"precio_menos": 1.733
+},
+{
+"jugador": "CeeDee Lamb",
+"stat": "td",
+"linea": null,
+"p": 0.5526,
+"sin_vig": true,
+"casas": 9,
+"precio": 1.625
+},
+{
+"jugador": "Dak Prescott",
+"stat": "passing_yards",
+"linea": 261.5,
+"p": 0.5,
+"min": 258.5,
+"max": 293.5,
+"casas": 7,
+"precio_mas": 1.889,
+"precio_menos": 1.889
+},
+{
+"jugador": "Dak Prescott",
+"stat": "rushing_yards",
+"linea": 9.5,
+"p": 0.4975,
+"min": 8.5,
+"max": 9.5,
+"casas": 7,
+"precio_mas": 1.877,
+"precio_menos": 1.877
+},
+{
+"jugador": "Dak Prescott",
+"stat": "td",
+"linea": null,
+"p": 0.1243,
+"sin_vig": true,
+"casas": 9,
+"precio": 7.0
+},
+{
+"jugador": "Dallas Goedert",
+"stat": "receiving_yards",
+"linea": 30.5,
+"p": 0.4975,
+"min": 30.5,
+"max": 42.5,
+"casas": 7,
+"precio_mas": 1.877,
+"precio_menos": 1.873
+},
+{
+"jugador": "Dallas Goedert",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.4803,
+"min": 3.5,
+"max": 3.5,
+"casas": 6,
+"precio_mas": 1.98,
+"precio_menos": 1.787
+},
+{
+"jugador": "Dallas Goedert",
+"stat": "td",
+"linea": null,
+"p": 0.2454,
+"sin_vig": false,
+"casas": 8,
+"precio": 4.075
+},
+{
+"jugador": "Darius Cooper",
+"stat": "receiving_yards",
+"linea": 27.5,
+"p": 0.5026,
+"min": 25.5,
+"max": 27.5,
+"casas": 6,
+"precio_mas": 1.87,
+"precio_menos": 1.901
+},
+{
+"jugador": "Darius Cooper",
+"stat": "receptions",
+"linea": 2.5,
+"p": 0.4383,
+"min": 2.5,
+"max": 2.5,
+"casas": 6,
+"precio_mas": 2.15,
+"precio_menos": 1.667
+},
+{
+"jugador": "Darius Cooper",
+"stat": "td",
+"linea": null,
+"p": 0.1581,
+"sin_vig": false,
+"casas": 8,
+"precio": 6.325
+},
+{
+"jugador": "DeVonta Smith",
+"stat": "receiving_yards",
+"linea": 65.0,
+"p": 0.4856,
+"min": 63.5,
+"max": 74.5,
+"casas": 6
+},
+{
+"jugador": "DeVonta Smith",
+"stat": "receptions",
+"linea": 5.5,
+"p": 0.4963,
+"min": 5.5,
+"max": 5.5,
+"casas": 6,
+"precio_mas": 1.877,
+"precio_menos": 1.87
+},
+{
+"jugador": "DeVonta Smith",
+"stat": "td",
+"linea": null,
+"p": 0.3419,
+"sin_vig": false,
+"casas": 8,
+"precio": 2.925
+},
+{
+"jugador": "Eli Stowers",
+"stat": "td",
+"linea": null,
+"p": 0.0385,
+"sin_vig": false,
+"casas": 8,
+"precio": 26.0
+},
+{
+"jugador": "Elijah Moore",
+"stat": "td",
+"linea": null,
+"p": 0.0435,
+"sin_vig": false,
+"casas": 8,
+"precio": 23.0
+},
+{
+"jugador": "George Pickens",
+"stat": "receiving_yards",
+"linea": 71.5,
+"p": 0.4989,
+"min": 68.5,
+"max": 81.5,
+"casas": 7,
+"precio_mas": 1.889,
+"precio_menos": 1.881
+},
+{
+"jugador": "George Pickens",
+"stat": "receptions",
+"linea": 5.5,
+"p": 0.4437,
+"min": 5.5,
+"max": 5.5,
+"casas": 6,
+"precio_mas": 2.15,
+"precio_menos": 1.658
+},
+{
+"jugador": "George Pickens",
+"stat": "td",
+"linea": null,
+"p": 0.438,
+"sin_vig": true,
+"casas": 9,
+"precio": 1.87
+},
+{
+"jugador": "Grant Calcaterra",
+"stat": "td",
+"linea": null,
+"p": 0.0351,
+"sin_vig": false,
+"casas": 8,
+"precio": 28.5
+},
+{
+"jugador": "Hunter Luepke",
+"stat": "td",
+"linea": null,
+"p": 0.1053,
+"sin_vig": false,
+"casas": 8,
+"precio": 9.5
+},
+{
+"jugador": "Jake Ferguson",
+"stat": "td",
+"linea": null,
+"p": 0.2639,
+"sin_vig": false,
+"casas": 2,
+"precio": 3.8
+},
+{
+"jugador": "James Mitchell",
+"stat": "td",
+"linea": null,
+"p": 0.0572,
+"sin_vig": false,
+"casas": 8,
+"precio": 17.5
+},
+{
+"jugador": "Javonte Williams",
+"stat": "receiving_yards",
+"linea": 7.5,
+"p": 0.4963,
+"min": 7.5,
+"max": 9.5,
+"casas": 7,
+"precio_mas": 1.909,
+"precio_menos": 1.877
+},
+{
+"jugador": "Javonte Williams",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.5699,
+"min": 1.5,
+"max": 1.5,
+"casas": 6,
+"precio_mas": 1.654,
+"precio_menos": 2.2
+},
+{
+"jugador": "Javonte Williams",
+"stat": "rushing_yards",
+"linea": 76.0,
+"p": 0.4742,
+"min": 74.5,
+"max": 94.5,
+"casas": 8
+},
+{
+"jugador": "Javonte Williams",
+"stat": "td",
+"linea": null,
+"p": 0.604,
+"sin_vig": true,
+"casas": 9,
+"precio": 1.549
+},
+{
+"jugador": "Jaydon Blue",
+"stat": "td",
+"linea": null,
+"p": 0.0371,
+"sin_vig": false,
+"casas": 8,
+"precio": 27.0
+},
+{
+"jugador": "Joe Milton",
+"stat": "passing_yards",
+"linea": 200.5,
+"p": 0.4959,
+"min": 194.5,
+"max": 230.5,
+"casas": 7,
+"precio_mas": 1.901,
+"precio_menos": 1.877
+},
+{
+"jugador": "Joe Milton",
+"stat": "rushing_yards",
+"linea": 32.0,
+"p": 0.4765,
+"min": 30.5,
+"max": 42.5,
+"casas": 6
+},
+{
+"jugador": "Joe Milton",
+"stat": "td",
+"linea": null,
+"p": 0.2614,
+"sin_vig": false,
+"casas": 8,
+"precio": 3.825
+},
+{
+"jugador": "Johnny Mundt",
+"stat": "td",
+"linea": null,
+"p": 0.0308,
+"sin_vig": false,
+"casas": 8,
+"precio": 32.5
+},
+{
+"jugador": "Jonathan Mingo",
+"stat": "td",
+"linea": null,
+"p": 0.0667,
+"sin_vig": false,
+"casas": 5,
+"precio": 15.0
+},
+{
+"jugador": "KaVontae Turpin",
+"stat": "receiving_yards",
+"linea": 4.5,
+"p": 0.5043,
+"min": 4.5,
+"max": 4.5,
+"casas": 5,
+"precio_mas": 1.87,
+"precio_menos": 1.901
+},
+{
+"jugador": "KaVontae Turpin",
+"stat": "receptions",
+"linea": 0.5,
+"p": 0.5881,
+"min": 0.5,
+"max": 0.5,
+"casas": 5,
+"precio_mas": 1.606,
+"precio_menos": 2.25
+},
+{
+"jugador": "KaVontae Turpin",
+"stat": "rushing_yards",
+"linea": 3.5,
+"p": 0.5016,
+"min": 3.5,
+"max": 3.5,
+"casas": 4,
+"precio_mas": 1.844,
+"precio_menos": 1.918
+},
+{
+"jugador": "KaVontae Turpin",
+"stat": "td",
+"linea": null,
+"p": 0.1333,
+"sin_vig": false,
+"casas": 8,
+"precio": 7.5
+},
+{
+"jugador": "Luke Schoonmaker",
+"stat": "td",
+"linea": null,
+"p": 0.125,
+"sin_vig": false,
+"casas": 8,
+"precio": 8.0
+},
+{
+"jugador": "Makai Lemon",
+"stat": "receiving_yards",
+"linea": 30.5,
+"p": 0.4766,
+"min": 29.5,
+"max": 41.5,
+"casas": 6
+},
+{
+"jugador": "Makai Lemon",
+"stat": "receptions",
+"linea": 3.5,
+"p": 0.4212,
+"min": 3.5,
+"max": 3.5,
+"casas": 6,
+"precio_mas": 2.3,
+"precio_menos": 1.599
+},
+{
+"jugador": "Makai Lemon",
+"stat": "td",
+"linea": null,
+"p": 0.202,
+"sin_vig": false,
+"casas": 8,
+"precio": 4.95
+},
+{
+"jugador": "Ryan Flournoy",
+"stat": "receiving_yards",
+"linea": 31.5,
+"p": 0.4986,
+"min": 28.5,
+"max": 41.5,
+"casas": 6,
+"precio_mas": 1.877,
+"precio_menos": 1.877
+},
+{
+"jugador": "Ryan Flournoy",
+"stat": "receptions",
+"linea": 2.5,
+"p": 0.5809,
+"min": 2.5,
+"max": 3.5,
+"casas": 6,
+"precio_mas": 1.617,
+"precio_menos": 2.225
+},
+{
+"jugador": "Ryan Flournoy",
+"stat": "td",
+"linea": null,
+"p": 0.2685,
+"sin_vig": false,
+"casas": 8,
+"precio": 3.725
+},
+{
+"jugador": "Saquon Barkley",
+"stat": "receiving_yards",
+"linea": 7.5,
+"p": 0.4971,
+"min": 7.5,
+"max": 8.5,
+"casas": 5,
+"precio_mas": 1.901,
+"precio_menos": 1.866
+},
+{
+"jugador": "Saquon Barkley",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.4648,
+"min": 1.5,
+"max": 1.5,
+"casas": 5,
+"precio_mas": 2.0,
+"precio_menos": 1.741
+},
+{
+"jugador": "Saquon Barkley",
+"stat": "rushing_yards",
+"linea": 64.5,
+"p": 0.4966,
+"min": 64.5,
+"max": 75.5,
+"casas": 5,
+"precio_mas": 1.893,
+"precio_menos": 1.87
+},
+{
+"jugador": "Saquon Barkley",
+"stat": "td",
+"linea": null,
+"p": 0.4843,
+"sin_vig": false,
+"casas": 8,
+"precio": 2.065
+},
+{
+"jugador": "Will Shipley",
+"stat": "receiving_yards",
+"linea": 6.5,
+"p": 0.4764,
+"min": 5.5,
+"max": 6.5,
+"casas": 5,
+"precio_mas": 1.971,
+"precio_menos": 1.8
+},
+{
+"jugador": "Will Shipley",
+"stat": "receptions",
+"linea": 1.5,
+"p": 0.3678,
+"min": 1.5,
+"max": 1.5,
+"casas": 5,
+"precio_mas": 2.55,
+"precio_menos": 1.476
+},
+{
+"jugador": "Will Shipley",
+"stat": "td",
+"linea": null,
+"p": 0.1429,
+"sin_vig": false,
+"casas": 8,
+"precio": 7.0
+},
+{
+"jugador": "Zach Ertz",
+"stat": "td",
+"linea": null,
+"p": 0.0625,
+"sin_vig": false,
+"casas": 8,
+"precio": 16.0
+}
+]
+}
